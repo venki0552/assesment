@@ -1,0 +1,257 @@
+[
+  {
+    "assesment": "Working with REST APIs in JavaScript",
+    "questions": [
+      {
+        "answer": "Many servers only return claim identifiers that can be used to retrieve resources.",
+        "question": "You are implementing an application making use of Claims-Based Authorization with JSON Web Token (JWT). You authorize the user as follows:\n\nfetch(\n  `https://YOUR_DOMAIN/authorize?\n     response_type=token&\n     client_id=YOUR_CLIENT_ID&\n     redirect_uri=https://YOUR_APP/callback&\n     scope=openid profile\n  `\n)\n\nThe data segment of the JWT token in the response doesn't include the user's name. Why doesn't the profile scope return the user's name as well?"
+      },
+      {
+        "answer": "Once you create the database by instantiating a PouchDB object, you are ready to start writing JSON data into it.",
+        "question": "What is true about storing JSON data in PouchDB?"
+      },
+      {
+        "answer": "The URI is missing $expand=Customer",
+        "question": "You are requesting data from an OData-compliant REST API. The data source uses eager loading and contains a list of orders, along with the customer who made the order. You want to return a list of all the orders based on a particular customer using the following URI:\n\nhttps://rest.api/Orders/$filter=Orders/Customer eq 'Customer 1'\n\nWhy would this be returning an error and not the list of Orders for \"Customer 1\"?"
+      },
+      {
+        "answer": "const user = verifyAndGetUser(username, password);\nconst userClaims = db.claims.findOne({ userId: user.id });\nconst token = jwt.sign(userClaims, privateKey, { expiresIn: '1h' });",
+        "question": "How will you extend the following code snippet to incorporate a Claims store, assuming you have a Mongo collection 'Claims' set up as your data store?\n\napp.get('/authorize', (req, res) => {\n  const { username, password } = req.body;\n  const user = verifyAndGetUser(username, password);\n  const token = jwt.sign(user, privateKey, { expiresIn: '1h' });\n  res.send(token);\n});"
+      },
+      {
+        "answer": "function validate(evt){\n     evt.value = evt.value.replace(/[^0-9]/g,\"\");\n}",
+        "question": "Your search form involves an identity field consisting of numeric digits. Instead of allowing the entry field to accept any character and then validating this, you want to restrict entry to numeric characters only. What function will achieve this when responding to the onkeypress event?"
+      },
+      {
+        "answer": "Call the open() method before send().",
+        "question": "The code below uses the XMLHttpRequest object to retrieve data:\n\nfunction getData() {\n    const url = 'http://localhost:5000/api';\n\n    let req = new XMLHttpRequest();\n\n    req.onreadystatechange = function () {\n        if (this.readyState === XMLHttpRequest.DONE && this.status == 200) {\n            let response = JSON.parse(this.response);\n            alert(response);\n        }\n    };\n\n    req.send();\n}\n\nThe request fails to execute. How can you solve this issue?"
+      },
+      {
+        "answer": "<optgroup label=\"Title\"></optgroup>",
+        "question": "What HTML element allows you to structure options in a <select> element under a named option group?"
+      },
+      {
+        "answer": "A REST API request URL to be retrieved and cached",
+        "question": "What type of object is expected when adding items to the JavaScript Cache?"
+      },
+      {
+        "answer": "match",
+        "question": "What is an example of a JavaScript Cache API method that can help you determine if the cache needs updating?"
+      },
+      {
+        "answer": "It doesn't support tracking the percentage of completion.",
+        "question": "What is one reason why developers don't use the Fetch API for uploading multiple files to a server?"
+      },
+      {
+        "answer": "Use JavaScript code to directly access the Document Object Model (DOM) API.",
+        "question": "What would you do to natively manipulate user interface (UI) elements in the browser?"
+      },
+      {
+        "answer": "The HTTP 200 response status is not returned. ",
+        "question": "You are debugging the API endpoint below that uses Node.js and Express. The request hangs and times out while testing an HTTP PUT request. What could be the problem?\n\n// ...\n\nrouter.put('/:id', (req, res) => {\n    const itemToUpdate = getItemById(req.params.id);\n\n    if (itemToUpdate) {\n        updateItem(req.body, req.params.id);\n    } else {\n        res.status(404).send();\n    }\n});"
+      },
+      {
+        "answer": "The next() callback should be called in all handlers except the last one.",
+        "question": "ou are developing the error handling module below in Express to encapsulate all necessary error handling cases. The handlers are used in the order they are written.\n\nconst logger = {\n    logToConsole: function (err, req, res, next) {\n        // handler code\n    },\n    logToFile: function (err, req, res, next) {\n        // handler code\n    },\n    genericLogger: function (err, req, res, next) {\n        // handler code\n        next();\n    },\n};\n\nWhen testing, you notice that only the first handler is ever called. What is the issue?"
+      },
+      {
+        "answer": "Associate a label with the input element and style the label instead, while visually hiding the input from the user, but not from the browser.",
+        "question": "You are a developer working on a file upload control. You want it to match your branding, but you are unable to achieve this in a cross-browser manner by just applying CSS to the input. What other strategy might you consider?"
+      },
+      {
+        "answer": "Do not mix symmetric and asymmetric algorithms.",
+        "question": "You set up JSON Web Tokens (JWT) on your Express application using the following code:\n\nconst jwt = require('express-jwt');\napp.use(jwt({\n  secret: 'shhhhhhared-secret',\n  algorithms: ['HS256', 'RS256']\n}))\n\nA penetration test identifies that your website suffers from downgrade vulnerabilities. What could you do to address this?"
+      },
+      {
+        "answer": "app.use(function (err, req, res, next) {\n    res.status(500).json({\n        status: 500,\n        message: 'Custom Error',\n    });\n});",
+        "question": "How would you create and use a custom exception middleware in Express?"
+      },
+      {
+        "answer": "A database in which claims are saved",
+        "question": "What is a Claims data store?"
+      },
+      {
+        "answer": "No matches will be returned.",
+        "question": "Your JavaScript Cache contains the following URLs:\n\nhttp://pluralsight.com/?key1=value1\nhttp://pluralsight.com/?key2=value2\n\nYou want to see if an entry is in the cache or if you need to go to API. What will happen when you issue a call to the match method on your cache, with a parameter of http://pluralsight.com, and no other options supplied?"
+      },
+      {
+        "answer": "The 'profile' scope must be specified in the scope parameter.",
+        "question": "You are authorizing a user using the following code:\n\nfetch(\n  `https://YOUR_DOMAIN/authorize?\n     response_type=token&\n     client_id=YOUR_CLIENT_ID&\n     redirect_uri=https://YOUR_APP/callback&\n     scope=openid\n  `\n)\n\nThe user is able to log in and receives a JSON Web Token (JWT). Upon attempting to fetch the user's profile, the server returns a 401 status code. What could be the issue?"
+      },
+      {
+        "answer": "It can be achieved by using HTML without any JavaScript",
+        "question": "What is true about selecting multiple files for upload on the browser side?"
+      }
+    ]
+  },
+  {
+    "assesment": "API Design and Development",
+    "questions": [
+      {
+        "answer": "Application usability",
+        "question": "What does API versioning simplify?"
+      },
+      {
+        "answer": "The specific fields that were in error and how the user can fix them",
+        "question": "You are designing the /Items API endpoint. What information should you return to the API consumer in the case where the inputs are incorrect?"
+      },
+      {
+        "answer": "Implement an appropriate maximum upload file size for API requests.",
+        "question": "You develop a RESTful API and must safeguard it against excessive resource consumption. As part of this, you verify the spending limit with a third-party service provider. What other steps should you take to ensure effective resource consumption by the API?"
+      },
+      {
+        "answer": "To govern the number of API calls",
+        "question": "While developing a RESTful API, why would you use API keys?"
+      },
+      {
+        "answer": "You prevent your APIs from exhaustive and unfair resource consumption.",
+        "question": "You add rate limiting to your APIs. What happens?"
+      },
+      {
+        "answer": "Versioning details inform developers about differences between versions as well as upcoming changes.",
+        "question": "Why is it important to include versioning details, including deprecation notices, in API documentation?"
+      },
+      {
+        "answer": "skip=10&take=5",
+        "question": "An API returns records with sequential integer IDs, starting at 1. You need the IDs: 11, 12, 13, 14, and 15. How would you write the query string?"
+      },
+      {
+        "answer": "Data Encryption Standard",
+        "question": "Which is an encryption algorithm?"
+      },
+      {
+        "answer": "Mock testing",
+        "question": "Which testing method enables you to assess a component independently, excluding external services?"
+      },
+      {
+        "answer": "Disable their next login attempts for the next few minutes.",
+        "question": "You create a website for users to interact with based on their sports interests. To participate in interactions, users must register on the site. You enable rate limiting for the number of logins per minute. What should you do if users unintentionally surpass the rate limit?"
+      },
+      {
+        "answer": "1 hour",
+        "question": "Your application depends on an authorization server to implement OAuth 2.0 authorization. If the access token's validity period is 15 minutes, what should the refresh token's validity period be?"
+      },
+      {
+        "answer": "The resource is missing with no retrieval time limit.",
+        "question": "You visit the domain name https://helloearth.com and receive the 404 Not Found error. What does the error signify?"
+      },
+      {
+        "answer": "Zero",
+        "question": "How many previous session states are active on the server at the third client request following RESTful API principles?"
+      },
+      {
+        "answer": "Switch to using JSON Web Token (JWT) as the OAuth's access token.",
+        "question": "When signing up clients to your application through OAuth 2.0 using their social email IDs, you request access to their photos and other media for an enhanced website experience. An attacker exploits an OAuth 2.0 vulnerability to gain access to users' private data, however. What steps can you take to address and fix this security vulnerability?"
+      },
+      {
+        "answer": 1,
+        "question": "You are working on a microservices architecture with 10 services. How many services can directly access the data store of the first service?"
+      },
+      {
+        "answer": "Authentication",
+        "question": "What security aspect does HTTPS emphasize when verifying digital certificates when connecting to a website's server?"
+      },
+      {
+        "answer": "503 Service Unavailable",
+        "question": "You must display an HTTP status code to users who are persistently making frequent failed login attempts. Which HTTP status code should you use other than 429 Too Many Requests?"
+      },
+      {
+        "answer": "You must keep the tokens confidential during their transmission. ",
+        "question": "In OAuth, which statement is correct about refresh tokens?"
+      },
+      {
+        "answer": "The 'profile' scope must be specified in the scope parameter.",
+        "question": "You build a social networking site that allows users to scroll at a rate of three feeds per second. The API permits access to 10 feeds per second. Some users exhaust their rate limit but are unsure what to do next. You set the X-RateLimit-Limit header to 10 for API requests per second, but this does not clarify the user's next steps. How can you address this uncertainty?"
+      },
+      {
+        "answer": "xxx.payload.xxx",
+        "question": "In JSON Web Token (JWT) syntax, where do you include the payload?"
+      }
+    ]
+  },
+  {
+    "assesment": "ES6",
+    "questions": [
+      {
+        "answer": "Named",
+        "question": "What type of export is used below? export { Foo, bar, baz };"
+      },
+      {
+        "answer": "const foo = {\n  f(bar) { console.log(bar); }\n};",
+        "question": "Which of the following results in the same function definition for foo.f?\n\nconst foo = {\n  f: function (bar) { console.log(bar); }\n};"
+      },
+      {
+        "answer": "const aCollection = new Set()\naCollection.add(foo)\naCollection.add(bar)",
+        "question": "You need to add the following two variables in an object without the addition of any extra values (undefined or null). These two variable values must not overlap one another, that is, the size of the object must be two. Which code performs this action?\n\nconst foo = {a: 1, b: 2}\nconst bar = {a: 1, b: 2}"
+      },
+      {
+        "answer": "You can use the clear() method with a Set, but not with a WeakSet.",
+        "question": "What statement is true regarding a Set and a WeakSet?"
+      },
+      {
+        "answer": "makeClassA(B)",
+        "question": "What expression must replace ? to have class A extend class B?\n\nlet makeClassA = B => class A extends B {\nmethodA() { }\n}\nclass B { }\nclass C extends ? { }"
+      },
+      {
+        "answer": 16,
+        "question": "What is written to the console when the following statement executes? console.log(new Int32Array(4).byteLength);"
+      },
+      {
+        "answer": "WeakSets are not iterable.",
+        "question": "What is the most likely reason the following code would throw an error when you run it?\n\nvar x = new WeakSet();\nx.add({ key1: 1 });\nx.add({ key2: 2 });\nx.add({ key3: 3 });\nfor (var y of x.values()) {\n  console.log(y);\n}"
+      },
+      {
+        "answer": "console.log( \"http://pluralsight.com\".startsWith(\"http://\", -1) );",
+        "question": "Which of the following will return true?"
+      },
+      {
+        "answer": "Array [\"20\", \"30\", \"50\"]",
+        "question": "You created an object with three elements as follows:\n\nconst anObject = { 50: 'ItemA', 20: 'ItemC', 30: 'ItemB' };\nconsole.log(Object.keys(anObject));\n\n What output will you receive on the console after running the above two statements?"
+      },
+      {
+        "answer": "\"Hello User One from undefined\"",
+        "question": "What will the following code output?\n\nclass Person {\n  constructor(first, last) {\n    this.firstName = first;\n    this.lastName = last;\n    this.fullName = `${first} ${last}`;\n  }\n  static sayHello(otherPerson) {\n    return `Hello ${otherPerson.fullName} from ${this.fullName}`;\n  }\n}\nconst guest1 = new Person(\"User\", \"One\");\nconst guest2 = new Person(\"Person\", \"Two\");\nconsole.log(Person.sayHello(guest1, guest2));"
+      },
+      {
+        "answer": "Replace WeakMap() with Map().",
+        "question": "You create a WeakMap and pass two values to it as follows:\n\nlet aCollection = new WeakMap()\nconst o1 = {}\nconst o2 = window\naCollection.set(o1, 'Item7845')\naCollection.set(o2, 'Item2144')\n\nfor (let [key, value] of aCollection) {\n  console.log(key + ' = ' + value)\n}\n\nUpon iteration, you receive the error aCollection is not iterable. What fixes must you make in the question to remove the error and display the output?"
+      },
+      {
+        "answer": "WeakMap() is not iterable, so you should switch to Map() instead.",
+        "question": "The following code is throwing an error. What is the problem and how would you fix it?\n\nvar x = new WeakMap();\nx.set(\"A\", \"a\");\nx.set(\"B\", \"b\");\nx.set(\"C\", \"c\");\nx.forEach(value => console.log(value));"
+      },
+      {
+        "answer": "Employee.defaultDepartment",
+        "question": "How would you fix the reference to defaultDepartment in the following method?\n\nclass Employee {\n  static get defaultDepartment() {\n    return \"Ops\";\n  }\n  getOrganization() {\n    return \"IT\";\n  }\n  getDepartment() {\n    return this.getOrganization() ? \"AppDev\" : defaultDepartment;\n  }\n}"
+      },
+      {
+        "answer": "Using proxy.count results in an infinite loop",
+        "question": "The following proxy trap throws an error at runtime. What is wrong?\n\nconst counter = new Proxy({}, {\n  get(target, prop, proxy) {\n    proxy.count++;\n    return target[prop]\n  }\n})\nconsole.log(counter.count)"
+      },
+      {
+        "answer": "0 to 3 (both inclusive)",
+        "question": "Consider the following string:\n\nconst aString = 'We play monopoly on weekends and order pizza.'\nconsole.log(aString.includes('play', _____))\n\nWhich single number or range of numbers can be used in the blank so that the includes() method returns true?"
+      },
+      {
+        "answer": 100,
+        "question": "What will the output of the following code be?\n\nconst pos1 = {\n  x: 25,\n  y: 40\n};\nconst pos2 = Object.assign(pos1, { y: 50 });\nconsole.log(pos1.y + pos2.y)"
+      },
+      {
+        "answer": "var",
+        "question": "In the following code, which keyword, when used in all the three blanks, results in the output 5 5 1?\n\n_____ x = 1;\n\nfunction func(){\n  _____ x = 1;  \n  if (x === 1) {\n    _____ x = 5;\n    console.log(x);\n  }\nconsole.log(x);\n}\nfunc()\n\nconsole.log(x);"
+      },
+      {
+        "answer": "export { FOO as default };",
+        "question": "Which is equivalent to the export statement in this snippet?\n\nconst FOO = 42;\nexport default FOO;"
+      },
+      {
+        "answer": "import Defaults, * as pkg78f from '/modules/exp-module.js';",
+        "question": "You need to import objects exported through default export along with rest of the other objects and values. Which command would you write to fetch them while aliasing all the objects other than defaults to pkg78f?"
+      },
+      {
+        "answer": "The class declarations are not hoisted.",
+        "question": "Consider the following code in which you are creating a class and its object:\n\nconst anObject = new someClass();\nclass someClass {};\nconsole.log(anObject.aMethod()); \n\nWhen you run the above code, you receive a reference error. Why?"
+      }
+    ]
+  }
+]
