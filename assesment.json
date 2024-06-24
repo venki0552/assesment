@@ -213,44 +213,129 @@
         "question": "What will the following code output?\n\nclass Person {\n  constructor(first, last) {\n    this.firstName = first;\n    this.lastName = last;\n    this.fullName = `${first} ${last}`;\n  }\n  static sayHello(otherPerson) {\n    return `Hello ${otherPerson.fullName} from ${this.fullName}`;\n  }\n}\nconst guest1 = new Person(\"User\", \"One\");\nconst guest2 = new Person(\"Person\", \"Two\");\nconsole.log(Person.sayHello(guest1, guest2));"
       },
       {
-        "answer": "Replace WeakMap() with Map().",
-        "question": "You create a WeakMap and pass two values to it as follows:\n\nlet aCollection = new WeakMap()\nconst o1 = {}\nconst o2 = window\naCollection.set(o1, 'Item7845')\naCollection.set(o2, 'Item2144')\n\nfor (let [key, value] of aCollection) {\n  console.log(key + ' = ' + value)\n}\n\nUpon iteration, you receive the error aCollection is not iterable. What fixes must you make in the question to remove the error and display the output?"
+        "answer": "Use JavaScript code to directly access the Document Object Model (DOM) API.",
+        "question": "What would you do to natively manipulate user interface (UI) elements in the browser?"
       },
       {
-        "answer": "WeakMap() is not iterable, so you should switch to Map() instead.",
-        "question": "The following code is throwing an error. What is the problem and how would you fix it?\n\nvar x = new WeakMap();\nx.set(\"A\", \"a\");\nx.set(\"B\", \"b\");\nx.set(\"C\", \"c\");\nx.forEach(value => console.log(value));"
+        "answer": "The HTTP 200 response status is not returned. ",
+        "question": "You are debugging the API endpoint below that uses Node.js and Express. The request hangs and times out while testing an HTTP PUT request. What could be the problem?\n\n// ...\n\nrouter.put('/:id', (req, res) => {\n    const itemToUpdate = getItemById(req.params.id);\n\n    if (itemToUpdate) {\n        updateItem(req.body, req.params.id);\n    } else {\n        res.status(404).send();\n    }\n});"
       },
       {
-        "answer": "Employee.defaultDepartment",
-        "question": "How would you fix the reference to defaultDepartment in the following method?\n\nclass Employee {\n  static get defaultDepartment() {\n    return \"Ops\";\n  }\n  getOrganization() {\n    return \"IT\";\n  }\n  getDepartment() {\n    return this.getOrganization() ? \"AppDev\" : defaultDepartment;\n  }\n}"
+        "answer": "The next() callback should be called in all handlers except the last one.",
+        "question": "ou are developing the error handling module below in Express to encapsulate all necessary error handling cases. The handlers are used in the order they are written.\n\nconst logger = {\n    logToConsole: function (err, req, res, next) {\n        // handler code\n    },\n    logToFile: function (err, req, res, next) {\n        // handler code\n    },\n    genericLogger: function (err, req, res, next) {\n        // handler code\n        next();\n    },\n};\n\nWhen testing, you notice that only the first handler is ever called. What is the issue?"
       },
       {
-        "answer": "Using proxy.count results in an infinite loop",
-        "question": "The following proxy trap throws an error at runtime. What is wrong?\n\nconst counter = new Proxy({}, {\n  get(target, prop, proxy) {\n    proxy.count++;\n    return target[prop]\n  }\n})\nconsole.log(counter.count)"
+        "answer": "Associate a label with the input element and style the label instead, while visually hiding the input from the user, but not from the browser.",
+        "question": "You are a developer working on a file upload control. You want it to match your branding, but you are unable to achieve this in a cross-browser manner by just applying CSS to the input. What other strategy might you consider?"
       },
       {
-        "answer": "0 to 3 (both inclusive)",
-        "question": "Consider the following string:\n\nconst aString = 'We play monopoly on weekends and order pizza.'\nconsole.log(aString.includes('play', _____))\n\nWhich single number or range of numbers can be used in the blank so that the includes() method returns true?"
+        "answer": "Do not mix symmetric and asymmetric algorithms.",
+        "question": "You set up JSON Web Tokens (JWT) on your Express application using the following code:\n\nconst jwt = require('express-jwt');\napp.use(jwt({\n  secret: 'shhhhhhared-secret',\n  algorithms: ['HS256', 'RS256']\n}))\n\nA penetration test identifies that your website suffers from downgrade vulnerabilities. What could you do to address this?"
       },
       {
-        "answer": 100,
-        "question": "What will the output of the following code be?\n\nconst pos1 = {\n  x: 25,\n  y: 40\n};\nconst pos2 = Object.assign(pos1, { y: 50 });\nconsole.log(pos1.y + pos2.y)"
+        "answer": "app.use(function (err, req, res, next) {\n    res.status(500).json({\n        status: 500,\n        message: 'Custom Error',\n    });\n});",
+        "question": "How would you create and use a custom exception middleware in Express?"
       },
       {
-        "answer": "var",
-        "question": "In the following code, which keyword, when used in all the three blanks, results in the output 5 5 1?\n\n_____ x = 1;\n\nfunction func(){\n  _____ x = 1;  \n  if (x === 1) {\n    _____ x = 5;\n    console.log(x);\n  }\nconsole.log(x);\n}\nfunc()\n\nconsole.log(x);"
+        "answer": "A database in which claims are saved",
+        "question": "What is a Claims data store?"
       },
       {
-        "answer": "export { FOO as default };",
-        "question": "Which is equivalent to the export statement in this snippet?\n\nconst FOO = 42;\nexport default FOO;"
+        "answer": "No matches will be returned.",
+        "question": "Your JavaScript Cache contains the following URLs:\n\nhttp://pluralsight.com/?key1=value1\nhttp://pluralsight.com/?key2=value2\n\nYou want to see if an entry is in the cache or if you need to go to API. What will happen when you issue a call to the match method on your cache, with a parameter of http://pluralsight.com, and no other options supplied?"
       },
       {
-        "answer": "import Defaults, * as pkg78f from '/modules/exp-module.js';",
-        "question": "You need to import objects exported through default export along with rest of the other objects and values. Which command would you write to fetch them while aliasing all the objects other than defaults to pkg78f?"
+        "answer": "The 'profile' scope must be specified in the scope parameter.",
+        "question": "You are authorizing a user using the following code:\n\nfetch(\n  `https://YOUR_DOMAIN/authorize?\n     response_type=token&\n     client_id=YOUR_CLIENT_ID&\n     redirect_uri=https://YOUR_APP/callback&\n     scope=openid\n  `\n)\n\nThe user is able to log in and receives a JSON Web Token (JWT). Upon attempting to fetch the user's profile, the server returns a 401 status code. What could be the issue?"
       },
       {
-        "answer": "The class declarations are not hoisted.",
-        "question": "Consider the following code in which you are creating a class and its object:\n\nconst anObject = new someClass();\nclass someClass {};\nconsole.log(anObject.aMethod()); \n\nWhen you run the above code, you receive a reference error. Why?"
+        "answer": "It can be achieved by using HTML without any JavaScript",
+        "question": "What is true about selecting multiple files for upload on the browser side?"
+      }
+    ]
+  },
+  {
+    "assesment": "Java",
+    "questions": [
+      {
+        "answer": "forEach",
+        "question": "Which operation is terminal, meaning it is eagerly loaded and can return either a primitive, concrete, or void type?"
+      },
+      {
+        "answer": "It favors code re-usage;",
+        "question": "Which is an advantage of extracting super-classes/subclasses while developing a hierarchy?"
+      },
+      {
+        "answer": "A new thread automatically replaces the old thread.",
+        "question": "A thread in a fixed thread pool is closed. What happens?"
+      },
+      {
+        "answer": "Use the volatile keyword.",
+        "question": "You need to include a variable in your program that may be updated by multiple running threads, so it needs to be stored in main memory. How can you declare this variable?"
+      },
+      {
+        "answer": "public interface Interface2 extends Interface1",
+        "question": " How can you define an interface that can access all of the members of another interface?"
+      },
+      {
+        "answer": "An interface can only have abstract methods, whereas an abstract class can have abstract and non-abstract methods.",
+        "question": "What is a difference between an interface and an abstract class?"
+      },
+      {
+        "answer": "When the implementation provides additional methods that must be called on the declared object",
+        "question": "When will you reference an object through implementation rather than through an interface?"
+      },
+      {
+        "answer": "Strategy",
+        "question": "Which design pattern can you implement to encapsulate conditional logic in a lambda expression?"
+      },
+      {
+        "answer": "interface Flyer public final static int NB_WINGS = 2; public abstract void fly();",
+        "question": "Question was not answered in the time given. Recorded as incorrect."
+      },
+      {
+        "answer": "A thread pool helps you manage and reuse the resources threads use.",
+        "question": "Why is it a good idea to use a thread pool when you have an application that might want to run many tasks in parallel?"
+      },
+      {
+        "answer": "Inheritance is limited to a single parent class, whereas delegation allows you to implement functionality from multiple classes.",
+        "question": "What is the difference between inheritance and delegation?"
+      },
+      {
+        "answer": "From a subclass to a superclass",
+        "question": "You must pull up a field in your program. Which direction should it go in? "
+      },
+      {
+        "answer": "Comparator",
+        "question": "The sorted method of a Stream can receive what as an argument?"
+      },
+      {
+        "answer": "0 2 2 5",
+        "question": "What is the output of the following code?"
+      },
+      {
+        "answer": "Div by zero Finally Caught IllegalArgumentException",
+        "question": "What output will the following program print when you run it?public class Calculate {\n    public static void main(String[] args) {\n        try {\n            int result = divide(3, 0);\n            System.out.println(result);\n        } catch (ArithmeticException e) {\n            System.out.println(\"Caught ArithmeticException\");\n        } catch (IllegalArgumentException e) {\n            System.out.println(\"Caught IllegalArgumentException\");\n        }\n    }\n\n    public static int divide(int x, int y) {\n        try {\n            return x / y;\n        } catch (ArithmeticException e) {\n            System.out.println(\"Div by zero\");\n            throw new IllegalArgumentException();\n        } finally {\n            System.out.println(\"Finally\");\n        }\n    }\n}"
+      },
+      {
+        "answer": "Use the Thread Pool Pattern.",
+        "question": "You are designing a program and you need a way to control the number of threads that the application creates, and control incoming tasks in a queue. How can you achieve this? "
+      },
+      {
+        "answer": "The variable must be final or effectively final.",
+        "question": "Which condition must you fulfill so that a lambda expression captures a local variable?"
+      },
+      {
+        "answer": "Add throws InterruptedException after declaring the main method.",
+        "question": "You have the following code which results in a syntax error: \n\npublic class PracticeClass {\n    public static void main(String[] args) {                \n        Thread.sleep(10000);\n        System.out.println(\"Hello World\");\n    }\n}\n\nWhat change can you make to fix this? "
+      },
+      {
+        "answer": "You create a subclass composed of features that are only used in certain cases. ",
+        "question": "What is happening when you extract a subclass? "
+      },
+      {
+        "answer": "myList.stream().filter(s -> s.startsWith(\"c\"))\n               .map(String::toUpperCase).forEach(System.out::println);",
+        "question": " \n\nGiven the following class, which block of code will compile? \n\nimport java.util.*;\npublic class myClass{\n\n     public static void main(String []args){\n        List<String> myList = Arrays.asList(\"a\", \"b\", \"c\", \"d\", \"e\");  \n        ________________\n     }\n}"
       }
     ]
   }
