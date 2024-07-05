@@ -81,6 +81,86 @@
       {
         "answer": "It can be achieved by using HTML without any JavaScript",
         "question": "What is true about selecting multiple files for upload on the browser side?"
+      },
+      {
+        "answer": "http://pluralsight.com/?key1=value1 is matched",
+        "question": "Your JavaScript Cache contains the following URLs:\n\nhttp://pluralsight.com/?key1=value1\nhttp://pluralsight.com/?key2=value2\n\nWhat will happen when you issue a call to the match method on your cache, with a parameter of http://pluralsight.com, while also supplying the ignoreSearch option as true?"
+      },
+      {
+        "answer": "For all HTTP verbs, all paths starting with 'protected' will go through the custom authentication middleware logic defined by you in requireAuth.",
+        "question": "You are using Express to implement a Node.js REST API. You want to restrict access to some of your routes to only allow authenticated users to access them. What will the following achieve?\n\n \n\napp.all('/protected/*', requireAuth)"
+      },
+      {
+        "answer": "app.use(function (err, req, res, next) {\n    res.status(500).json({\n        status: 500,\n        message: 'Custom Error',\n    });\n});",
+        "question": "How would you create and use a custom exception middleware in Express?"
+      },
+      {
+        "answer": "$(\"#searchPremium\").prop(\"disabled\", false);",
+        "question": "You are working on a web application that uses the latest version of jQuery to implement its user interface's (UI) interactivity. Upon successful user login, a button with the identifier searchPremium should become usable. How should you implement this using jQuery recommendations?"
+      },
+      {
+        "answer": "The token is an encoded JSON object containing the claims.",
+        "question": "How can a JSON Web Token (JWT) be used for reading the user's claims?"
+      },
+      {
+        "answer": "match",
+        "question": "What is an example of a JavaScript Cache API method that can help you determine if the cache needs updating?"
+      },
+      {
+        "answer": "The scope parameter is verified by the server and automatically corrected.",
+        "question": "Why might you prefer using the scope parameter to secure UI elements instead of a custom parameter?"
+      },
+      {
+        "answer": "label",
+        "question": "What HTML tag can you use when styling an input tag of type file?"
+      },
+      {
+        "answer": "Set the input's form attribute to a value that matches the form's id.",
+        "question": "You are working on a client-side implementation of a form for an item on an e-commerce site. One of the inputs on this form is a file. You want to place the input file on an area of the site that is not the form itself. How can you still associate the file with the form?"
+      },
+      {
+        "answer": "npm init --yes",
+        "question": "How can you instantly initialize a new project using npm with default values for all the command-line prompts?"
+      },
+      {
+        "answer": "The route parameter id for the patch method is missing.",
+        "question": "You are partially updating an entity using the code below:\n\nYou are partially updating an entity using the code below:\n\nrouter.patch('/entity', (req, res) => {\n    const itemToUpdate = getItemById(req.params.id);\n\n    if (itemToUpdate) {\n        updateItem(req.body, req.params.id);\n\n        res.status(200).send();\n    } else {\n        res.status(404).send();\n    }\n});\n\nWhen sending a request from the client application to this API method, you receive a 404 Not Found status. What is the primary cause for this issue?"
+      },
+      {
+        "answer": "Middleware",
+        "question": "When aiming to secure an Express route, which type of function must you provide as part of the route's definition?"
+      },
+      {
+        "answer": "XMLHttpRequest API exposes dedicated mechanisms for this.",
+        "question": "What is true about the mechanisms available for tracking async file upload progress to a server?"
+      },
+      {
+        "answer": "app.get('/protected',\n  jwt({ secret: 'shhhhhhared-secret', algorithms: ['HS256'] }),\n  function(req, res) {\n    if (!req.user.admin) return res.sendStatus(401);\n    res.sendStatus(200);\n  });",
+        "question": "You are using Claims-based authorization via JSON Web Token (JWT) in your app. How will you parse the claims in a JWT token for a protected endpoint?"
+      },
+      {
+        "answer": "Inspect the body of the '201 CREATED' response you received, which will contain a JSON object with the information you need.",
+        "question": "You are using a REST API to create a new item. After successfully executing the command, you need to retrieve the primary key or unique ID of the item that was created. How can you do this?"
+      },
+      {
+        "answer": "It allows you to use the same JavaScript syntax from browser applications when developing services that run on a server, while offering file system and database access.",
+        "question": "What is an advantage of using server-side JavaScript?"
+      },
+      {
+        "answer": "Define a handler on the XMLHttpRequest.upload.onprogress object.",
+        "question": "You are using the XMLHttpRequest API to upload a file to a server asynchronously and you want to display the operation's progress. How will you read the progress?"
+      },
+      {
+        "answer": "Retrieve the item to be updated from the database. If it is null, return a 404 status to the client.",
+        "question": "You need to return a 404 Not Found status code from an API method if the item to be updated does not exist. How can you accomplish this?"
+      },
+      {
+        "answer": "router.put('/:id', (req, res) => {\n    const itemToUpdate = getItemById(req.params.id);\n\n    // ...\n});",
+        "question": "You need to create a new API method for updating a single item using Node.js and Express. What is the best practice in REST to accomplish this?"
+      },
+      {
+        "answer": "XMLHttpRequest",
+        "question": "If you need to call a REST API endpoint from JavaScript, what built-in object could you use?"
       }
     ]
   },
