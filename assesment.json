@@ -251,6 +251,86 @@
       {
         "answer": "It can be achieved by using HTML without any JavaScript",
         "question": "What is true about selecting multiple files for upload on the browser side?"
+      },
+      {
+        "answer": "Named",
+        "question": "What type of export is used below? export { Foo, bar, baz };"
+      },
+      {
+        "answer": "const foo = {\n  f(bar) { console.log(bar); }\n};",
+        "question": "Which of the following results in the same function definition for foo.f?\n\nconst foo = {\n  f: function (bar) { console.log(bar); }\n};"
+      },
+      {
+        "answer": "const aCollection = new Set()\naCollection.add(foo)\naCollection.add(bar)",
+        "question": "You need to add the following two variables in an object without the addition of any extra values (undefined or null). These two variable values must not overlap one another, that is, the size of the object must be two. Which code performs this action?\n\nconst foo = {a: 1, b: 2}\nconst bar = {a: 1, b: 2}"
+      },
+      {
+        "answer": "You can use the clear() method with a Set, but not with a WeakSet.",
+        "question": "What statement is true regarding a Set and a WeakSet?"
+      },
+      {
+        "answer": "makeClassA(B)",
+        "question": "What expression must replace ? to have class A extend class B?\n\nlet makeClassA = B => class A extends B {\nmethodA() { }\n}\nclass B { }\nclass C extends ? { }"
+      },
+      {
+        "answer": 16,
+        "question": "What is written to the console when the following statement executes? console.log(new Int32Array(4).byteLength);"
+      },
+      {
+        "answer": "WeakSets are not iterable.",
+        "question": "What is the most likely reason the following code would throw an error when you run it?\n\nvar x = new WeakSet();\nx.add({ key1: 1 });\nx.add({ key2: 2 });\nx.add({ key3: 3 });\nfor (var y of x.values()) {\n  console.log(y);\n}"
+      },
+      {
+        "answer": "console.log( \"\nhttp://pluralsight.com\".startsWith(\"http://\"\n, -1) );",
+        "question": "Which of the following will return true?"
+      },
+      {
+        "answer": "Array [\"20\", \"30\", \"50\"]",
+        "question": "You created an object with three elements as follows:\n\nconst anObject = { 50: 'ItemA', 20: 'ItemC', 30: 'ItemB' };\nconsole.log(Object.keys(anObject));\n\n What output will you receive on the console after running the above two statements?"
+      },
+      {
+        "answer": "\"Hello User One from undefined\"",
+        "question": "What will the following code output?\n\nclass Person {\n  constructor(first, last) {\n    this.firstName = first;\n    this.lastName = last;\n    this.fullName = `${first} ${last}`;\n  }\n  static sayHello(otherPerson) {\n    return `Hello ${otherPerson.fullName} from ${this.fullName}`;\n  }\n}\nconst guest1 = new Person(\"User\", \"One\");\nconst guest2 = new Person(\"Person\", \"Two\");\nconsole.log(Person.sayHello(guest1, guest2));"
+      },
+      {
+        "answer": "Replace WeakMap() with Map().",
+        "question": "You create a WeakMap and pass two values to it as follows:\n\nlet aCollection = new WeakMap()\nconst o1 = {}\nconst o2 = window\naCollection.set(o1, 'Item7845')\naCollection.set(o2, 'Item2144')\n\nfor (let [key, value] of aCollection) {\n  console.log(key + ' = ' + value)\n}\n\nUpon iteration, you receive the error aCollection is not iterable. What fixes must you make in the question to remove the error and display the output?"
+      },
+      {
+        "answer": "WeakMap() is not iterable, so you should switch to Map() instead.",
+        "question": "The following code is throwing an error. What is the problem and how would you fix it?\n\nvar x = new WeakMap();\nx.set(\"A\", \"a\");\nx.set(\"B\", \"b\");\nx.set(\"C\", \"c\");\nx.forEach(value => console.log(value));"
+      },
+      {
+        "answer": "Employee.defaultDepartment",
+        "question": "How would you fix the reference to defaultDepartment in the following method?\n\nclass Employee {\n  static get defaultDepartment() {\n    return \"Ops\";\n  }\n  getOrganization() {\n    return \"IT\";\n  }\n  getDepartment() {\n    return this.getOrganization() ? \"AppDev\" : defaultDepartment;\n  }\n}"
+      },
+      {
+        "answer": "Using proxy.count results in an infinite loop",
+        "question": "The following proxy trap throws an error at runtime. What is wrong?\n\nconst counter = new Proxy({}, {\n  get(target, prop, proxy) {\n    proxy.count++;\n    return target[prop]\n  }\n})\nconsole.log(counter.count)"
+      },
+      {
+        "answer": "0 to 3 (both inclusive)",
+        "question": "Consider the following string:\n\nconst aString = 'We play monopoly on weekends and order pizza.'\nconsole.log(aString.includes('play', _____))\n\nWhich single number or range of numbers can be used in the blank so that the includes() method returns true?"
+      },
+      {
+        "answer": 100,
+        "question": "What will the output of the following code be?\n\nconst pos1 = {\n  x: 25,\n  y: 40\n};\nconst pos2 = Object.assign(pos1, { y: 50 });\nconsole.log(pos1.y + pos2.y)"
+      },
+      {
+        "answer": "var",
+        "question": "In the following code, which keyword, when used in all the three blanks, results in the output 5 5 1?\n\n_____ x = 1;\n\nfunction func(){\n  _____ x = 1;  \n  if (x === 1) {\n    _____ x = 5;\n    console.log(x);\n  }\nconsole.log(x);\n}\nfunc()\n\nconsole.log(x);"
+      },
+      {
+        "answer": "export { FOO as default };",
+        "question": "Which is equivalent to the export statement in this snippet?\n\nconst FOO = 42;\nexport default FOO;"
+      },
+      {
+        "answer": "import Defaults, * as pkg78f from '/modules/exp-module.js';",
+        "question": "You need to import objects exported through default export along with rest of the other objects and values. Which command would you write to fetch them while aliasing all the objects other than defaults to pkg78f?"
+      },
+      {
+        "answer": "The class declarations are not hoisted.",
+        "question": "Consider the following code in which you are creating a class and its object:\n\nconst anObject = new someClass();\nclass someClass {};\nconsole.log(anObject.aMethod()); \n\nWhen you run the above code, you receive a reference error. Why?"
       }
     ]
   },
@@ -336,6 +416,91 @@
       {
         "answer": "myList.stream().filter(s -> s.startsWith(\"c\"))\n               .map(String::toUpperCase).forEach(System.out::println);",
         "question": " \n\nGiven the following class, which block of code will compile? \n\nimport java.util.*;\npublic class myClass{\n\n     public static void main(String []args){\n        List<String> myList = Arrays.asList(\"a\", \"b\", \"c\", \"d\", \"e\");  \n        ________________\n     }\n}"
+      }
+    ]
+  },
+  {
+    "assesment": "Javascript Design Pattrens",
+    "questions": [
+      {
+        "question": "Binding a function allows developers to do what?",
+        "answer": "Explicitly control its this value"
+      },
+      {
+        "question": "What property is used to extend the String prototype for all instances of String?",
+        "answer": "prototype"
+      },
+      {
+        "question": "What are the primary benefits of a Factory?",
+        "answer": "Simplifies object creation by letting a subclass decide what to instantiate"
+      },
+      {
+        "question": "Which of the following is used to subscribe to element events in the DOM?",
+        "answer": "addEventListener"
+      },
+      {
+        "question": "Which pattern uses an object as a gatekeeper to another object?",
+        "answer": "Proxy"
+      },
+      {
+        "question": "Which is an example of importing all members from a built-in JavaScript module under a single namespace?",
+        "answer": "import * as myModule from './my-module.js'"
+      },
+      {
+        "question": "When would you want to unsubscribe from an publisher?",
+        "answer": "When your object no longer needs to recieve events"
+      },
+      {
+        "question": "Do JavaScript classes allow inheritance?",
+        "answer": "Yes, using extends"
+      },
+      {
+        "question": "How would you typically run a command on an object implementing the Command pattern?",
+        "answer": "execute(command)"
+      },
+      {
+        "question": "Functional programming posits that code cannot do which of the following to data?",
+        "answer": "Mutate"
+      },
+      {
+        "question": "You've stored data in localStorage with the key 'myKey' and now want to remove it. Which of the following is the correct way to do that?",
+        "answer": "localStorage.removeItem('myKey')"
+      },
+      {
+        "question": "How would you export and import a default function using built-in JavaScript modules? export default function() { ... }",
+        "answer": "import foo from './foo.js'"
+      },
+      {
+        "question": "What are all the types that can be exported from a built-in JavaScript module?",
+        "answer": "functions, objects, classes, & variables"
+      },
+      {
+        "question": "A user visits your site and a value is set in the sessionStorage of their browser specifying a discount percentage based on the site that referred them to you. If they are not using a secure transport Secure Sockets Layer (SSL) they are then redirected to the SSL URL for your webstore. Later in that same session, they are ready to check out, but the discount percentage in sessionStorage is blank. What is most likely the cause of this?",
+        "answer": "sessionStorage is per-Origin and an SSL URL is a different origin from a non-SSL URL because of the port change."
+      },
+      {
+        "question": "How would you handle this Promise rejection using async/await?\n\n\n function waiting (){\n  return new Promise(function(resolve, reject){\n    setTimeout(reject('value'), 0);\n  })\n}\n(async function(){\n  let value = await waiting(); \n  console.log(value);\n}())",
+        "answer": "try{\n  let value = await waiting(); \n  console.log(value);\n}\n  catch(error) {\n  console.log('error ' + error );\n}"
+      },
+      {
+        "question": "What keywords are used to import and export built-in JavaScript modules?",
+        "answer": "import, export"
+      },
+      {
+        "question": "Which is an example of exporting a function from an ES6 JavaScript module?",
+        "answer": "export function doAThing() { ... }"
+      },
+      {
+        "question": "Which ES6 protocol is used to define custom looping behavior for an object?",
+        "answer": "Iterable"
+      },
+      {
+        "question": "Given the following code, how should you have the text node contents displayed inside the newly created Div?\n\n\nvar div = document.createElement(\"div\"); \nvar text = document.createTextNode(\"Hello World\");",
+        "answer": "div.appendChild(text);"
+      },
+      {
+        "question": " What is a benefit of the Pub/Sub pattern?",
+        "answer": "Decouples communication between objects"
       }
     ]
   }
