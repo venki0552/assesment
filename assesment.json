@@ -501,6 +501,86 @@
       {
         "question": " What is a benefit of the Pub/Sub pattern?",
         "answer": "Decouples communication between objects"
+      },
+      {
+        "answer": "my-app.js doesn't have a default function",
+        "question": "The following built-in JavaScript import is failing on the myApp() line (myApp is undefined):\n\nimport myApp, { MY_CONSTANT } from './my-app.js'\nmyApp()"
+      },
+      {
+        "answer": "createElement(tagName) will create the HTMLElement specified by tagName or else an  HTMLUnknownElement if tagName isn't a valid HTMLElement specifier",
+        "question": "Which of the following is true about creating DOM elements?"
+      },
+      {
+        "answer": "constructor, author",
+        "question": "Given the following class, what methods are on Course.prototype?\n\nclass Course {\n  constructor (title) {\n    this.title = title;\n  }\n  get author() {\n    return this.author.firstName + ' ' + this.author.lastName\n  }\n}"
+      },
+      {
+        "answer": "Add another script tag with the nomodule attribute to a non-module script",
+        "question": "You want to use built-in JavaScript modules, but are sensitive to browsers that do not support them yet. What must you do to provide a fallback for these browsers?"
+      },
+      {
+        "answer": "var trans = myDb.transaction([\"myDb\"], \"readwrite\");\ntrans.objectStore(\"myStore\").delete(id);",
+        "question": "Which of the following snippets shows how to remove an item from indexedDb?"
+      },
+      {
+        "answer": "Object.create",
+        "question": "What static Object function is used to create an object using another object's prototype?"
+      },
+      {
+        "answer": "The first argument is the command name. This call will remove it and only pass the remaining arguments to the command function.",
+        "question": " \n\nIn the following code sample, the first line of the execute function is a call to Array.prototype.slice. Why?\n\nvar repo = {\n    select: function (id) {\n        console.log('Getting task ' + id);\n        return {\n            name: 'new task from db'\n        }\n    },\n    save: function (task) {\n        console.log('Saving ' + task.name + ' to the db');\n    }\n}\nrepo.execute = function(name){\n    var args = Array.prototype.slice.call(arguments, 1);\n    if(repo[name]){\n        return repo[name].apply(repo, args)\n    }\n    if(name==='get'){\n        return repo['select'].apply(repo, args)\n    }\n    return false;\n};\nvar task = repo.execute('get', 1);"
+      },
+      {
+        "answer": "Allow you to define prototype-based classes with a clean syntax.",
+        "question": "What do JavaScript classes do?"
+      },
+      {
+        "answer": "ES6 Proxies",
+        "question": "Which of the following can be used to provide validation for object properties?"
+      },
+      {
+        "answer": "Message Broker",
+        "question": "Which actor in the Pub/Sub pattern maintains a list of subscribers?"
+      },
+      {
+        "answer": "Command pattern",
+        "question": "Which pattern encapsulates a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations?"
+      },
+      {
+        "answer": "const MahClass = require('./mah-class').MahClass\nconst mahClass = new MahClass()",
+        "question": "How do you import and instantiate MahClass, given the following exported prototype from a CommonJS JavaScript module already exists?\n\nconst MahClass = function () {}\nMahClass.prototype.sayHello = function() { return 'ohai!'}\nexports.MahClass = MahClass"
+      },
+      {
+        "answer": "Publisher, Message Bus, Subscriber",
+        "question": "What are the actors in a Pub/Sub implementation?"
+      },
+      {
+        "answer": "Call Object.setPrototypeOf() and pass in the object and new prototype.",
+        "question": "Which is the preferred method of changing an object's prototype?"
+      },
+      {
+        "answer": "0 to 3 (both inclusive)",
+        "question": "Consider the following string:\n\nconst aString = 'We play monopoly on weekends and order pizza.'\nconsole.log(aString.includes('play', _____))\n\nWhich single number or range of numbers can be used in the blank so that the includes() method returns true?"
+      },
+      {
+        "answer": 100,
+        "question": "What will the output of the following code be?\n\nconst pos1 = {\n  x: 25,\n  y: 40\n};\nconst pos2 = Object.assign(pos1, { y: 50 });\nconsole.log(pos1.y + pos2.y)"
+      },
+      {
+        "answer": "var",
+        "question": "In the following code, which keyword, when used in all the three blanks, results in the output 5 5 1?\n\n_____ x = 1;\n\nfunction func(){\n  _____ x = 1;  \n  if (x === 1) {\n    _____ x = 5;\n    console.log(x);\n  }\nconsole.log(x);\n}\nfunc()\n\nconsole.log(x);"
+      },
+      {
+        "answer": "export { FOO as default };",
+        "question": "Which is equivalent to the export statement in this snippet?\n\nconst FOO = 42;\nexport default FOO;"
+      },
+      {
+        "answer": "import Defaults, * as pkg78f from '/modules/exp-module.js';",
+        "question": "You need to import objects exported through default export along with rest of the other objects and values. Which command would you write to fetch them while aliasing all the objects other than defaults to pkg78f?"
+      },
+      {
+        "answer": "The class declarations are not hoisted.",
+        "question": "Consider the following code in which you are creating a class and its object:\n\nconst anObject = new someClass();\nclass someClass {};\nconsole.log(anObject.aMethod()); \n\nWhen you run the above code, you receive a reference error. Why?"
       }
     ]
   }
