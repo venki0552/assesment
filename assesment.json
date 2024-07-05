@@ -161,6 +161,62 @@
       {
         "answer": "XMLHttpRequest",
         "question": "If you need to call a REST API endpoint from JavaScript, what built-in object could you use?"
+      },
+      {
+        "answer": "It can provide a more useful context and additional metadata about the response that is returned to the client.",
+        "question": "What is an advantage of wrapping an API method response in a JSON object?"
+      },
+      {
+        "answer": "There is nothing to check that if the item is null, it should return a 404 status code.",
+        "question": "You are developing an API method to delete an item using the code below:\n\nrouter.delete('/:id', (req, res) => {\n\n    db.inventory.deleteOne({ id: req.params.id });\n\n    res.status(204);\n});\n\nWhat is the issue with this implementation?"
+      },
+      {
+        "answer": "Use the Express Generator tool to create an application skeleton for serving HTML.",
+        "question": "You are working on a JavaScript server-side application that already uses the Express web application framework. Alongside the REST API, you need to create a simple route for displaying data in the browser. How can you take advantage of the features offered by Express to accomplish this?"
+      },
+      {
+        "answer": "Use the options.startkey and options.endkey arguments to implement pagination.",
+        "question": "You are using the allDocs PouchDB method to fetch multiple documents. Too many documents are being retrieved at once, causing significant performance issues in the UI. How can you retrieve the documents without causing UI issues, while also following the performance recommendations of PouchDB?"
+      },
+      {
+        "answer": "When the handler you define on the relevant file request's xhr.upload.onload object is triggered",
+        "question": "You are using the XMLHttpRequest API to upload multiple files to a server asynchronously. You use xhr.upload.onprogress to track upload progress on each file (one file per request sent). How will you know when the upload is finished on a per-file basis?"
+      },
+      {
+        "answer": "When the Fetch API promise is resolved, display your custom message if response.ok is not true.",
+        "question": "You are migrating an application from using jQuery to communicate with a REST endpoint to using the Fetch API. You want to display a custom message every time a request is not successful. How can you implement this behavior?"
+      },
+      {
+        "answer": "The status message contains the HTTP status description. The response body contains a JSON object representing the error(s).",
+        "question": "What is the difference between the status message and the response body when handling error responses from a JSON REST API endpoint?"
+      },
+      {
+        "answer": "Use JavaScript code to directly access the Document Object Model (DOM) API.",
+        "question": "What would you do to natively manipulate user interface (UI) elements in the browser?"
+      },
+      {
+        "answer": "Helmet",
+        "question": "What Express-compatible middleware will help you secure your Node.js REST API?"
+      },
+      {
+        "answer": "let req = new XMLHttpRequest();\n\nreq.onreadystatechange = function () {\n\n    if (this.readyState === XMLHttpRequest.DONE && \n        this.statusText === 'OK') {\n\n        // print response...\n    }\n};",
+        "question": "You need to write a JavaScript method that calls an API endpoint using the XMLHttpRequest object, and prints the response when the status value is equal to \"OK\". How can you accomplish this?"
+      },
+      {
+        "answer": "Placing them in the same div",
+        "question": "On the client-side, which HTML procedure allows you to associate a file with another item?"
+      },
+      {
+        "answer": "Use a specialized JavaScript runtime that is made for writing server-side applications that can access server resources.",
+        "question": "You must create an application that requires database and file system access. How can you implement this using the JavaScript language?"
+      },
+      {
+        "answer": "const formhelp = formidable({ multiples: true });",
+        "question": "You are using the Formidable Node.js module in Express to process file upload requests. You want to define a REST endpoint capable of storing several files per request and you can use temp folder storage. What is the next step, once you define the signature of the endpoint as below?\n\napp.post('/your/endpoint/path/goes/here', (req, res, next) => {"
+      },
+      {
+        "answer": "It doesn't support tracking the percentage of completion.",
+        "question": "What is one reason why developers don't use the Fetch API for uploading multiple files to a server?"
       }
     ]
   },
