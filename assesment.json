@@ -6468,3 +6468,42 @@ A: cache.match(url)
 Q: Which method of the jsonwebtoken library can add a user object to the JSON Web Token (JWT)?
 A: jwt.sign(...)
 
+Q: What will happen if you do not specify an explicit timeout value when using the Fetch API to upload files?
+A: The timeout value will depend on the browser used.
+
+Q: You are developing an API method for inserting data using the code below:
+router.post('/', (req, res) => {
+    const newItem = req.body;
+
+    // insert item...
+
+    res.sendStatus(201).json({
+        message: 'Item created.',
+        data: newItem,
+    });
+});
+The response only contains the "Created" message and not the custom JSON payload. What changes would you make to fix this?
+A: The status() method should be used instead of sendStatus().
+
+Q: What is true about storing JSON data in PouchDB?
+A: You must provide the _id key and its associated value in any JSON object that you store, regardless of the method you use to store the data.
+
+Q: If a PUT request is made to update an item, which HTTP status does it return?
+A: 200 OK or 204 No Content
+
+Q:  If your REST API approves a user authentication request, what should it omit from the response it sends back to the client?
+A: The password
+
+Q: You need to create an API method that will be used for retrieving a list of items; however, when testing the code below, you only receive the first item.
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send(
+          { id: 123, name: 'item1' }, 
+          { id: 234, name: 'item2' }, 
+          { id: 345, name: 'item3' }
+        );
+});
+What changes would you make to solve this?
+A: The items to be sent need to be part of a JavaScript array.
