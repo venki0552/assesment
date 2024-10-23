@@ -1,5 +1,250 @@
 [
   {
+  "assesment": "ES6",
+  "questions": [
+    {
+      "answer": "Named",
+      "question": "What type of export is used below? export { Foo, bar, baz };"
+    },
+    {
+      "answer": "const foo = {\n  f(bar) { console.log(bar); }\n};",
+      "question": "Which of the following results in the same function definition for foo.f?\n\nconst foo = {\n  f: function (bar) { console.log(bar); }\n};"
+    },
+    {
+      "answer": "const aCollection = new Set()\naCollection.add(foo)\naCollection.add(bar)",
+      "question": "You need to add the following two variables in an object without the addition of any extra values (undefined or null). These two variable values must not overlap one another, that is, the size of the object must be two. Which code performs this action?\n\nconst foo = {a: 1, b: 2}\nconst bar = {a: 1, b: 2}"
+    },
+    {
+      "answer": "You can use the clear() method with a Set, but not with a WeakSet.",
+      "question": "What statement is true regarding a Set and a WeakSet?"
+    },
+    {
+      "answer": "makeClassA(B)",
+      "question": "What expression must replace ? to have class A extend class B?\n\nlet makeClassA = B => class A extends B {\nmethodA() { }\n}\nclass B { }\nclass C extends ? { }"
+    },
+    {
+      "answer": 16,
+      "question": "What is written to the console when the following statement executes? console.log(new Int32Array(4).byteLength);"
+    },
+    {
+      "answer": "WeakSets are not iterable.",
+      "question": "What is the most likely reason the following code would throw an error when you run it?\n\nvar x = new WeakSet();\nx.add({ key1: 1 });\nx.add({ key2: 2 });\nx.add({ key3: 3 });\nfor (var y of x.values()) {\n  console.log(y);\n}"
+    },
+    {
+      "answer": "console.log( \"http://pluralsight.com\".startsWith(\"http://\", -1) );",
+      "question": "Which of the following will return true?"
+    },
+    {
+      "answer": "Array [\"20\", \"30\", \"50\"]",
+      "question": "You created an object with three elements as follows:\n\nconst anObject = { 50: 'ItemA', 20: 'ItemC', 30: 'ItemB' };\nconsole.log(Object.keys(anObject));\n\n What output will you receive on the console after running the above two statements?"
+    },
+    {
+      "answer": "\"Hello User One from undefined\"",
+      "question": "What will the following code output?\n\nclass Person {\n  constructor(first, last) {\n    this.firstName = first;\n    this.lastName = last;\n    this.fullName = `${first} ${last}`;\n  }\n  static sayHello(otherPerson) {\n    return `Hello ${otherPerson.fullName} from ${this.fullName}`;\n  }\n}\nconst guest1 = new Person(\"User\", \"One\");\nconst guest2 = new Person(\"Person\", \"Two\");\nconsole.log(Person.sayHello(guest1, guest2));"
+    },
+    {
+      "answer": "Use JavaScript code to directly access the Document Object Model (DOM) API.",
+      "question": "What would you do to natively manipulate user interface (UI) elements in the browser?"
+    },
+    {
+      "answer": "The HTTP 200 response status is not returned. ",
+      "question": "You are debugging the API endpoint below that uses Node.js and Express. The request hangs and times out while testing an HTTP PUT request. What could be the problem?\n\n// ...\n\nrouter.put('/:id', (req, res) => {\n    const itemToUpdate = getItemById(req.params.id);\n\n    if (itemToUpdate) {\n        updateItem(req.body, req.params.id);\n    } else {\n        res.status(404).send();\n    }\n});"
+    },
+    {
+      "answer": "The next() callback should be called in all handlers except the last one.",
+      "question": "ou are developing the error handling module below in Express to encapsulate all necessary error handling cases. The handlers are used in the order they are written.\n\nconst logger = {\n    logToConsole: function (err, req, res, next) {\n        // handler code\n    },\n    logToFile: function (err, req, res, next) {\n        // handler code\n    },\n    genericLogger: function (err, req, res, next) {\n        // handler code\n        next();\n    },\n};\n\nWhen testing, you notice that only the first handler is ever called. What is the issue?"
+    },
+    {
+      "answer": "Associate a label with the input element and style the label instead, while visually hiding the input from the user, but not from the browser.",
+      "question": "You are a developer working on a file upload control. You want it to match your branding, but you are unable to achieve this in a cross-browser manner by just applying CSS to the input. What other strategy might you consider?"
+    },
+    {
+      "answer": "Do not mix symmetric and asymmetric algorithms.",
+      "question": "You set up JSON Web Tokens (JWT) on your Express application using the following code:\n\nconst jwt = require('express-jwt');\napp.use(jwt({\n  secret: 'shhhhhhared-secret',\n  algorithms: ['HS256', 'RS256']\n}))\n\nA penetration test identifies that your website suffers from downgrade vulnerabilities. What could you do to address this?"
+    },
+    {
+      "answer": "app.use(function (err, req, res, next) {\n    res.status(500).json({\n        status: 500,\n        message: 'Custom Error',\n    });\n});",
+      "question": "How would you create and use a custom exception middleware in Express?"
+    },
+    {
+      "answer": "A database in which claims are saved",
+      "question": "What is a Claims data store?"
+    },
+    {
+      "answer": "No matches will be returned.",
+      "question": "Your JavaScript Cache contains the following URLs:\n\nhttp://pluralsight.com/?key1=value1\nhttp://pluralsight.com/?key2=value2\n\nYou want to see if an entry is in the cache or if you need to go to API. What will happen when you issue a call to the match method on your cache, with a parameter of http://pluralsight.com, and no other options supplied?"
+    },
+    {
+      "answer": "The 'profile' scope must be specified in the scope parameter.",
+      "question": "You are authorizing a user using the following code:\n\nfetch(\n  `https://YOUR_DOMAIN/authorize?\n     response_type=token&\n     client_id=YOUR_CLIENT_ID&\n     redirect_uri=https://YOUR_APP/callback&\n     scope=openid\n  `\n)\n\nThe user is able to log in and receives a JSON Web Token (JWT). Upon attempting to fetch the user's profile, the server returns a 401 status code. What could be the issue?"
+    },
+    {
+      "answer": "It can be achieved by using HTML without any JavaScript",
+      "question": "What is true about selecting multiple files for upload on the browser side?"
+    },
+    {
+      "answer": "Named",
+      "question": "What type of export is used below? export { Foo, bar, baz };"
+    },
+    {
+      "answer": "const foo = {\n  f(bar) { console.log(bar); }\n};",
+      "question": "Which of the following results in the same function definition for foo.f?\n\nconst foo = {\n  f: function (bar) { console.log(bar); }\n};"
+    },
+    {
+      "answer": "const aCollection = new Set()\naCollection.add(foo)\naCollection.add(bar)",
+      "question": "You need to add the following two variables in an object without the addition of any extra values (undefined or null). These two variable values must not overlap one another, that is, the size of the object must be two. Which code performs this action?\n\nconst foo = {a: 1, b: 2}\nconst bar = {a: 1, b: 2}"
+    },
+    {
+      "answer": "You can use the clear() method with a Set, but not with a WeakSet.",
+      "question": "What statement is true regarding a Set and a WeakSet?"
+    },
+    {
+      "answer": "makeClassA(B)",
+      "question": "What expression must replace ? to have class A extend class B?\n\nlet makeClassA = B => class A extends B {\nmethodA() { }\n}\nclass B { }\nclass C extends ? { }"
+    },
+    {
+      "answer": 16,
+      "question": "What is written to the console when the following statement executes? console.log(new Int32Array(4).byteLength);"
+    },
+    {
+      "answer": "WeakSets are not iterable.",
+      "question": "What is the most likely reason the following code would throw an error when you run it?\n\nvar x = new WeakSet();\nx.add({ key1: 1 });\nx.add({ key2: 2 });\nx.add({ key3: 3 });\nfor (var y of x.values()) {\n  console.log(y);\n}"
+    },
+    {
+      "answer": "console.log( \"\nhttp://pluralsight.com\".startsWith(\"http://\"\n, -1) );",
+      "question": "Which of the following will return true?"
+    },
+    {
+      "answer": "Array [\"20\", \"30\", \"50\"]",
+      "question": "You created an object with three elements as follows:\n\nconst anObject = { 50: 'ItemA', 20: 'ItemC', 30: 'ItemB' };\nconsole.log(Object.keys(anObject));\n\n What output will you receive on the console after running the above two statements?"
+    },
+    {
+      "answer": "\"Hello User One from undefined\"",
+      "question": "What will the following code output?\n\nclass Person {\n  constructor(first, last) {\n    this.firstName = first;\n    this.lastName = last;\n    this.fullName = `${first} ${last}`;\n  }\n  static sayHello(otherPerson) {\n    return `Hello ${otherPerson.fullName} from ${this.fullName}`;\n  }\n}\nconst guest1 = new Person(\"User\", \"One\");\nconst guest2 = new Person(\"Person\", \"Two\");\nconsole.log(Person.sayHello(guest1, guest2));"
+    },
+    {
+      "answer": "Replace WeakMap() with Map().",
+      "question": "You create a WeakMap and pass two values to it as follows:\n\nlet aCollection = new WeakMap()\nconst o1 = {}\nconst o2 = window\naCollection.set(o1, 'Item7845')\naCollection.set(o2, 'Item2144')\n\nfor (let [key, value] of aCollection) {\n  console.log(key + ' = ' + value)\n}\n\nUpon iteration, you receive the error aCollection is not iterable. What fixes must you make in the question to remove the error and display the output?"
+    },
+    {
+      "answer": "WeakMap() is not iterable, so you should switch to Map() instead.",
+      "question": "The following code is throwing an error. What is the problem and how would you fix it?\n\nvar x = new WeakMap();\nx.set(\"A\", \"a\");\nx.set(\"B\", \"b\");\nx.set(\"C\", \"c\");\nx.forEach(value => console.log(value));"
+    },
+    {
+      "answer": "Employee.defaultDepartment",
+      "question": "How would you fix the reference to defaultDepartment in the following method?\n\nclass Employee {\n  static get defaultDepartment() {\n    return \"Ops\";\n  }\n  getOrganization() {\n    return \"IT\";\n  }\n  getDepartment() {\n    return this.getOrganization() ? \"AppDev\" : defaultDepartment;\n  }\n}"
+    },
+    {
+      "answer": "Using proxy.count results in an infinite loop",
+      "question": "The following proxy trap throws an error at runtime. What is wrong?\n\nconst counter = new Proxy({}, {\n  get(target, prop, proxy) {\n    proxy.count++;\n    return target[prop]\n  }\n})\nconsole.log(counter.count)"
+    },
+    {
+      "answer": "0 to 3 (both inclusive)",
+      "question": "Consider the following string:\n\nconst aString = 'We play monopoly on weekends and order pizza.'\nconsole.log(aString.includes('play', _____))\n\nWhich single number or range of numbers can be used in the blank so that the includes() method returns true?"
+    },
+    {
+      "answer": 100,
+      "question": "What will the output of the following code be?\n\nconst pos1 = {\n  x: 25,\n  y: 40\n};\nconst pos2 = Object.assign(pos1, { y: 50 });\nconsole.log(pos1.y + pos2.y)"
+    },
+    {
+      "answer": "var",
+      "question": "In the following code, which keyword, when used in all the three blanks, results in the output 5 5 1?\n\n_____ x = 1;\n\nfunction func(){\n  _____ x = 1;  \n  if (x === 1) {\n    _____ x = 5;\n    console.log(x);\n  }\nconsole.log(x);\n}\nfunc()\n\nconsole.log(x);"
+    },
+    {
+      "answer": "export { FOO as default };",
+      "question": "Which is equivalent to the export statement in this snippet?\n\nconst FOO = 42;\nexport default FOO;"
+    },
+    {
+      "answer": "import Defaults, * as pkg78f from '/modules/exp-module.js';",
+      "question": "You need to import objects exported through default export along with rest of the other objects and values. Which command would you write to fetch them while aliasing all the objects other than defaults to pkg78f?"
+    },
+    {
+      "answer": "In an array buffer",
+      "question": "Where is the data for a typed array kept?"
+    },
+    {
+      "answer": "The class declarations are not hoisted.",
+      "question": "Consider the following code in which you are creating a class and its object:\n\nconst anObject = new someClass();\nclass someClass {};\nconsole.log(anObject.aMethod()); \n\nWhen you run the above code, you receive a reference error. Why?"
+    },
+    {
+      "answer": "([arg, ...argMultiple] = [10, 1, 5, 5]) => \n  argMultiple.map((pick) => \n    pick * arg\n  );",
+      "question": "You must create an arrow function by destructuring its parameters. The first parameter must accept only one element, 10, whereas the second parameter must accept multiple elements, 1, 5, and 5. The function must multiply the value of the first argument with each element of the second argument to produce an array, [10, 50, 50]. How would you create this function?"
+    },
+    {
+      "answer": "super.methodName(args)",
+      "question": "When overriding a class method, how would you ensure that the base method is invoked?"
+    },
+    {
+      "answer": "Perform ascending sort, slice to index 2, and use map instead of reduce.",
+      "question": "Consider an unsorted array [15, 10, 8, 20, 25] and a primary number 5. You need to multiply the primary number with the two smallest numbers from the array. To do so, you created the following code:\n\nfunction Baz(primaryNum, ...args) {\n  let tempSort = args.sort(function(a, b){return b-a}).slice(0,3)\n  return tempSort.reduce(el => el * primaryNum)\n}\n\nconsole.log(Baz(5, 15, 10, 8, 20, 25));\n\nThis code results in the output of 625, rather than [40, 50]. What steps do you need to take to arrive at the expected answer?"
+    },
+    {
+      "answer": "Change map return object to:\n\n{  country,  keys: Object.keys(data.countryData[country] || {})}",
+      "question": "The following program returns an array of each country's data keys collected but it is throwing an error. What must you change to ensure that the program doesn't fail?\n\nconst data = {\n  countries: ['US', 'Canada'],\n  countryData: {\n    US: {\n      population: 2000000000\n    }\n  }\n};\nconst countryKeys = data.countries.map(country => ({\n  country,\n  keys: Object.keys(data.countryData[country])\n}))\nconsole.log(countryKeys)"
+    },
+    {
+      "answer": "typedArray.every(el => el > 1);\nnormalArray.every(el => el > 1);",
+      "question": "Consider the following two arrays:\n\nlet typedArray = new Uint16Array([8, 5, 4, 3]);\nlet normalArray = Array.from(typedArray);\n\nWhich code checks if both the typedArray and the normalArray have all the values greater than 1?"
+    },
+    {
+      "answer": "function unique(arr) {\n  return Array.from(new Set(arr));\n}",
+      "question": "Given the following code:\n\nlet values = [\"Earth\", \"Pluto\", \"Earth\", \"Pluto\",\n  \"Pluto\", \"Pluto\", \"Earth\", \"Earth\", \"Saturn\"\n];\n\nalert( unique(values) );\n\nWhich function returns the unique values?"
+    },
+    {
+      "answer": "function* myGenerator() {\n  yield 1;\n  yield 2;\n}",
+      "question": "How would you change the following function to return values one at a time?\n\nfunction* myGenerator() {\n  const rv = [1,2];\n  return rv;\n}"
+    },
+    {
+      "answer": "[...mightBeAString, ...myArray]",
+      "question": "You must combine two variables into a single array where each element is a single letter. One variable is an array and the other is either an array or a string. What is the best way to do this?"
+    },
+    {
+      "answer": "(arg1='somevalue', arg2=null, arg3) => ...",
+      "question": "How do you assign default parameters in arrow functions?"
+    },
+    {
+      "answer": "for(x of document.querySelectorAll('div')){\n  // process here\n  // break if necessary\n}",
+      "question": "You must copy the contents of all div tags from a web page. Which snippet will do this and allow you to break when a condition is met?"
+    },
+    {
+      "answer": "\"responseText\"\n\"#\" 0",
+      "question": "Assuming makeHttpCall is a constant variable holding a Promise value:\n\nconst makeHttpCall = new Promise( (success,failure) => {\n    success(0);\n});\n\nWhat will be the output to the console when the following code is run?\n\nmakeHttpCall.then((responseText) => {\n  console.log(\"#\",responseText);\n});\n\nconsole.log(\"responseText\");"
+    },
+    {
+      "answer": true,
+      "question": "What is the expected output of the following statement?\n\n\nconsole.log( Number.isInteger(5.00) );"
+    },
+    {
+      "answer": "\"undefined\"",
+      "question": "What is data type of output.timeperiod in the following code?\n\nlet language = 'ES6';\nlet timeperiod = 2019;\nlet output = `I am learning ${ language } since ${ timeperiod }.`;\n\nconsole.log(typeof output.timeperiod);"
+    },
+    {
+      "answer": "Use a WeakSet instead of a Set.",
+      "question": "You have a Set holding a large number of JavaScript objects. When there are no other references to one of the objects, you want it to be garbage collected. What is the easiest way to do this?"
+    },
+    {
+      "answer": "let arr;\narr = new Array(10000);\narr.fill(1, 500, 5000);",
+      "question": "Which code samples would be the most efficient way to set values in an array to 1 starting from 500 and equal to or less than 5,000?"
+    },
+    {
+      "answer": "function foo(a, ...b) {\n  b.forEach(function (term) {console.log(a * term);});\n}",
+      "question": "Which function will multiply the first parameter to the rest of the parameters?"
+    },
+    {
+      "answer": "Promise.race([myPromise1, myPromise2])\n  .then(result => {\n    console.log(result);\n  })\n  .catch(err => {\n    console.log(err);\n  });",
+      "question": "Which code shows the proper way to wait until one of the Promise groups (myPromise1, myPromise2) has been fulfilled?"
+    },
+    {
+      "answer": "console.log( aMap.get('key3')['value3'] === aMap.get('key1') );",
+      "question": " \n\nBased on the following code, which command returns true?\n\nlet aMap = new Map();\naMap.set('key1', 'value1');\naMap.set('key2', 'value2', 'value1');\naMap.set('key3', {'value3': 'value1'});"
+    },
+    {
+      "answer": "\"B\" \n\"C\" \n\"A\"",
+      "question": " \n\nThe following is an example of inheritance between three classes. In what order will the console log statements be executed?\n\nclass X {\n  log(message) {\n    console.log(message);\n  }\n}\nclass Y extends X {\n  log(message) {\n    console.log(\"B\");\n    super.log(message);\n  }\n}\nclass Z extends Y {\n  log(message) {\n    super.log(message);\n    console.log(\"A\");\n  }\n}\nvar z = new Z();\nz.log(\"C\");"
+    }
+  ]
+},
+  {
     "assesment": "Working with REST APIs in JavaScript",
     "questions": [
       {
