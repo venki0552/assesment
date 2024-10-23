@@ -1,4 +1,248 @@
-[
+[{
+  "assesment": "Java",
+  "questions": [
+    {
+      "answer": "forEach",
+      "question": "Which operation is terminal, meaning it is eagerly loaded and can return either a primitive, concrete, or void type?"
+    },
+    {
+      "answer": "It favors code re-usage;",
+      "question": "Which is an advantage of extracting super-classes/subclasses while developing a hierarchy?"
+    },
+    {
+      "answer": "A new thread automatically replaces the old thread.",
+      "question": "A thread in a fixed thread pool is closed. What happens?"
+    },
+    {
+      "answer": "Use the volatile keyword.",
+      "question": "You need to include a variable in your program that may be updated by multiple running threads, so it needs to be stored in main memory. How can you declare this variable?"
+    },
+    {
+      "answer": "public interface Interface2 extends Interface1",
+      "question": " How can you define an interface that can access all of the members of another interface?"
+    },
+    {
+      "answer": "An interface can only have abstract methods, whereas an abstract class can have abstract and non-abstract methods.",
+      "question": "What is a difference between an interface and an abstract class?"
+    },
+    {
+      "answer": "When the implementation provides additional methods that must be called on the declared object",
+      "question": "When will you reference an object through implementation rather than through an interface?"
+    },
+    {
+      "answer": "Strategy",
+      "question": "Which design pattern can you implement to encapsulate conditional logic in a lambda expression?"
+    },
+    {
+      "answer": "interface Flyer public final static int NB_WINGS = 2; public abstract void fly();",
+      "question": "Question was not answered in the time given. Recorded as incorrect."
+    },
+    {
+      "answer": "A thread pool helps you manage and reuse the resources threads use.",
+      "question": "Why is it a good idea to use a thread pool when you have an application that might want to run many tasks in parallel?"
+    },
+    {
+      "answer": "Inheritance is limited to a single parent class, whereas delegation allows you to implement functionality from multiple classes.",
+      "question": "What is the difference between inheritance and delegation?"
+    },
+    {
+      "answer": "From a subclass to a superclass",
+      "question": "You must pull up a field in your program. Which direction should it go in? "
+    },
+    {
+      "answer": "Comparator",
+      "question": "The sorted method of a Stream can receive what as an argument?"
+    },
+    {
+      "answer": "0 2 2 5",
+      "question": "What is the output of the following code?"
+    },
+    {
+      "answer": "Div by zero Finally Caught IllegalArgumentException",
+      "question": "What output will the following program print when you run it?public class Calculate {\n    public static void main(String[] args) {\n        try {\n            int result = divide(3, 0);\n            System.out.println(result);\n        } catch (ArithmeticException e) {\n            System.out.println(\"Caught ArithmeticException\");\n        } catch (IllegalArgumentException e) {\n            System.out.println(\"Caught IllegalArgumentException\");\n        }\n    }\n\n    public static int divide(int x, int y) {\n        try {\n            return x / y;\n        } catch (ArithmeticException e) {\n            System.out.println(\"Div by zero\");\n            throw new IllegalArgumentException();\n        } finally {\n            System.out.println(\"Finally\");\n        }\n    }\n}"
+    },
+    {
+      "answer": "Use the Thread Pool Pattern.",
+      "question": "You are designing a program and you need a way to control the number of threads that the application creates, and control incoming tasks in a queue. How can you achieve this? "
+    },
+    {
+      "answer": "The variable must be final or effectively final.",
+      "question": "Which condition must you fulfill so that a lambda expression captures a local variable?"
+    },
+    {
+      "answer": "Add throws InterruptedException after declaring the main method.",
+      "question": "You have the following code which results in a syntax error: \n\npublic class PracticeClass {\n    public static void main(String[] args) {                \n        Thread.sleep(10000);\n        System.out.println(\"Hello World\");\n    }\n}\n\nWhat change can you make to fix this? "
+    },
+    {
+      "answer": "You create a subclass composed of features that are only used in certain cases. ",
+      "question": "What is happening when you extract a subclass? "
+    },
+    {
+      "answer": "myList.stream().filter(s -> s.startsWith(\"c\"))\n               .map(String::toUpperCase).forEach(System.out::println);",
+      "question": " \n\nGiven the following class, which block of code will compile? \n\nimport java.util.*;\npublic class myClass{\n\n     public static void main(String []args){\n        List<String> myList = Arrays.asList(\"a\", \"b\", \"c\", \"d\", \"e\");  \n        ________________\n     }\n}"
+    },
+    {
+      "answer": "The x variable is not immutable because it's not final.",
+      "question": "Given the following class:\n\npublic class Immutable {\n    private int x;\n    private final int y;\n    private final StringBuffer sb;\n\n    public Immutable(int x, int y) {\n        this.x = x;\n        this.y = y;\n        this.sb = new StringBuffer();\n    }\n\n    public int getX() {\n        return x;\n    }\n\n    public int getY() {\n        return y;\n    }\n\n    public StringBuffer getSb() {\n        return sb;\n    }\n}"
+    },
+    {
+      "answer": "Strategy pattern",
+      "question": "Which pattern allows you to change the algorithmic behavior of software with the use of lambda expressions, based on runtime decisions?"
+    },
+    {
+      "answer": "Push down the method to the Student class. ",
+      "question": "You have a program with a Person superclass, and Employee, Student, Teacher, andChild subclasses that all inherit from Person. You have a getGrade() method declared in the Person class that is only being used in the Student class. How can you refactor this program to improve class coherence so that this method will be located where you expect it to be? "
+    },
+    {
+      "answer": "String s1 = \"abc\";\nString s2 = \"abc\";\nSystem.out.println(s1 == s2);",
+      "question": "Which snippet of code will print true as its result?"
+    },
+    {
+      "answer": "It does not extend the Thread class. ",
+      "question": "What is missing in the MultithreadingSample class? \n\nclass MultithreadingSample {\n    public void run() {\n        try {\n            System.out.println(\"Current Thread: \" + Thread.currentThread().getId());\n         } catch (Exception e) {\n             e.printStackTrace();\n        }\n    }\n}\n\npublic class PracticeClass {\n    public static void main(String[] args) {\n        int numThreads = 8;\n        for (int i = 0; i < numThreads; i++) {\n            MultithreadingSample mts = new MultithreadingSample();\n            mts.start();\n        }\n    }\n}"
+    },
+    {
+      "answer": "B HAS-A A",
+      "question": "Which relationship between classes A and B must be fulfilled to decide that B must perform delegation to an A?"
+    },
+    {
+      "answer": "Liskov substitution principle ",
+      "question": "You are designing an application in which the behavior of your classes is more important than its structure. Objects in a superclass and subclasses must behave the same way. You can implement less restrictive validation rules, but cannot enforce stricter rules in subclasses. Which SOLID design principle is in use in this application? "
+    },
+    {
+      "answer": "flatMap()",
+      "question": "You take a stream and replace the results with the contents of a mapped stream by applying the provided mapping function to each element. Which stream function does this refer to?"
+    },
+    {
+      "answer": "The high-level and low-level modules should depend on abstractions.",
+      "question": "What does the dependency inversion SOLID design principle mean?"
+    },
+    {
+      "answer": "Receiver",
+      "question": "When using the command pattern, which class performs an operation?"
+    },
+    {
+      "answer": "list.stream().collect(\n    Collectors.maxBy(\n        (s1, s2) -> s1.length() - s2.length()\n    )\n).orElse(\"No value\");",
+      "question": "The following line of code initializes a list:\n\nList<String> list = new ArrayList<>();\n\nWhich line will execute without throwing an exception?"
+    },
+    {
+      "answer": "private static final Date PROMOTION_START;\nprivate static final Date PROMOTION_END;\nDate becomeClientDate = <a value>;\nstatic {\n    Calendar gmtCal = Calendar.getInstance(TimeZone.getTimeZone(\"GMT\"));\n    gmtCal.set(2010, Calendar.JANUARY, 1, 0, 0, 0);\n    PROMOTION_START = gmtCal.getTime();\n    gmtCal.set(2011, Calendar.JANUARY, 1, 0, 0, 0);\n    PROMOTION_END = gmtCal.getTime();\n}\n\npublic boolean isPrivilegedClient() {\n    return becomeClientDate.compareTo(PROMOTION_START) >= 0 && \n        becomeClientDate.compareTo(PROMOTION_END) < 0;\n}",
+      "question": "A programmer must write a piece of code that determines if someone has become a client within the timeframe of a promotion given the PROMOTION_START and PROMOTION_END variables. Which version reuses the existing objects?"
+    },
+    {
+      "answer": "To provide error information so an implementation-specific exception is wrapped up in a more general exception with the original exception as the cause",
+      "question": "What is the main reason to use Java's exception chaining mechanism?"
+    },
+    {
+      "answer": "allMatch()",
+      "question": "Which stream method receives a predicate written as a lambda expression? "
+    },
+    {
+      "answer": "Class Employee would not compile, because its constructor implicitly tries to use the no-arguments constructor of class Person and class Person does not have such a constructor.",
+      "question": "What will happen if you use the following classes in a program?\n\npublic class Person {\n    private String name;\n\n    public Person(String name) {\n        this.name = name;\n    }\n}\n\n\nclass Employee extends Person {\n    private String department;\n\n    public Employee(String department) {\n        this.department = department;\n    }\n}"
+    },
+    {
+      "answer": "The root cause is the exception that was thrown first, which you can find near the bottom of the stack trace.",
+      "question": "In large, complicated pieces of software, when a stack trace is finally logged, the original exception has been caught and wrapped in a different exception multiple times. What is the best approach to understand such a stack trace?"
+    },
+    {
+      "answer": "A series of stack frames ",
+      "question": "What is a stack trace composed of? "
+    },
+    {
+      "answer": "They require one separate object for each distinct value.",
+      "question": "What is a disadvantage of immutable classes?"
+    },
+    {
+      "answer": "It will work without any errors; the deserialized Person object will have its id field set to null and its name field will have the same value as the original Person object.",
+      "question": "What will happen when you try to serialize a Person object and then deserialize the output again in the following code for the class Person?\n\npublic class Person implements Serializable {\n    private final transient Integer id;\n    private final String name;\n\n    public Person(Integer id, String name) {\n        this.id = id;\n        this.name = name;\n    }\n\n    public Integer getId() {\n        return id;\n    }\n\n    public String getName() {\n        return name;\n    }\n}"
+    },
+    {
+      "answer": "Hello world 1\nHello world 3 ",
+      "question": "What is the output of the following code? \n\npublic class PracticeClass {\n    public static void main(String[] args) {\n        try {\n            System.out.println(\"Hello world 1\");\n            return;\n        } catch (Exception e) {\n            System.out.println(\"Hello world 2\");\n        }\n        finally {\n            System.out.println(\"Hello world 3\");\n        }\n        System.out.println(\"Hello world 4\");\n    }\n}"
+    },
+    {
+      "answer": "FileNotFoundException",
+      "question": "What is an example of a checked exception? "
+    },
+    {
+      "answer": "Minimizing the use of static variables/collections and lazily loading a singleton",
+      "question": "Which approach should limit the risk of memory leaks?"
+    },
+    {
+      "answer": "Strategy",
+      "question": "Which design pattern can you implement to encapsulate conditional logic in a lambda expression?"
+    },
+    {
+      "answer": "The code does not compile, because the FileNotFoundException catch block is unreachable code.  ",
+      "question": "The \"test.txt\" file does not exist. InputStream.readAllBytes() is a method that was added in Java 9. It may throw an IOException. What happens when you try to compile and run the following code? \n\ntry {\n    InputStream in = new FileInputStream(\"test.txt\");\n    System.out.println(new String(in.readAllBytes(),StandardCharsets.UTF_8));\n    in.close();\n} catch (IOException e) {\n    System.out.println(\"Error while opening file\");\n} catch (FileNotFoundException e) {\n    System.out.println(\"File not found\");\n} catch (Exception e) {\n    System.out.println(\"Unknown error\");\n}"
+    },
+    {
+      "answer": "double average = list.stream().filter(client -> client.getAge() > 20).mapToInt(Client::getAge).average().getAsDouble();",
+      "question": "The following piece of code uses a loop on a list to calculate the average age of the clients (belonging to an existing Client class) older than 20.\n\nList<Client> list = new ArrayList<Client>();\nint count = 0;\ndouble sum = 0.0, average = 0.0;\nfor (Client client : list) {\n    if (client.getAge() > 20) {\n        sum += client.getAge();\n        count++;\n    }\n}\naverage = sum/count;\n\nHow can you refactor it to a stream?"
+    },
+    {
+      "answer": "Exception A is thrown out of the method and exception B is suppressed. Code handling exception A can get exception B by calling getSuppressed() on exception A.",
+      "question": "When the following method is called, it opens a ServerSocket that will wait for a client to connect on port 9000, then it sends back \"Hello\" to the client and closes the connection and the ServerSocket.\n\npublic void hello() throws IOException {\n    try (ServerSocket ss = new ServerSocket(9000);\n    OutputStream out = ss.accept().getOutputStream()) {\n        out.write(\"Hello\".getBytes(StandardCharsets.US_ASCII));\n        out.flush();\n    }\n}"
+    },
+    {
+      "answer": "When only a small number of subclasses use the inherited fields and methods from the parent",
+      "question": "When should you refactor a field or method through \"pushing down\"? "
+    },
+    {
+      "answer": "Use Reflection with the getClass() method. ",
+      "question": "You are using the instanceof operator on your collections to check on their types, but using this will not allow you to obtain the names of all its members for display. What change can you make to achieve this? "
+    },
+    {
+      "answer": "When working with database connections ",
+      "question": "In what scenario would it be beneficial to reuse an existing Object instead of creating a new one? "
+    },
+    {
+      "answer": "A ConcurrentHashMap allows multiple threads to read from the map concurrently, without blocking any of them; so multiple threads reading from the map don't have to wait for each other, while the synchronizedMap wrapper allows only one thread at a time to read from the map.",
+      "question": "You need a Map<String, String> in your program that multiple threads will access. To make sure your program is thread-safe, you can synchronize a regular HashMap with a wrapper:"
+    },
+    {
+      "answer": "The accessor method should be declared public.",
+      "question": "Why won't the following code compile? \n\npublic final class Car {\n    private String make;\n    //other fields\n \n    public void setMake(String _make) {\n        make = _make;\n    }\n\n    private String getMake() {\n        return make;\n    }\n    //other getters/setters\n}\npublic class MyClass {\n    public static void main(String[] args) {\n        Car car = new Car();\n        car.setMake(\"Toyota\");\n        String make = car.getMake();\n    }\n}"
+    },
+    {
+      "answer": "It throws an exception at line 5, because a String cannot be cast to an Integer.",
+      "question": "You run the following piece of code (with line numbers):\n\n1)  List list = new ArrayList(); \n2)  list.add(1); \n3)  list.add(\"2\"); \n4)  Integer number0 = (Integer)list.get(0); \n5)  Integer number1 = (Integer)list.get(1);"
+    },
+    {
+      "answer": "One interface with concrete classes implementing the interface",
+      "question": "What would you use to implement the strategy pattern?"
+    },
+    {
+      "answer": "Inheritance is limited to a single parent class, whereas delegation allows you to implement functionality from multiple classes.",
+      "question": "What is the difference between inheritance and delegation?"
+    },
+    {
+      "answer": "Stream.of(\"a1\", \"b1\", \"b5\", \"c1\", \"d1\")\n.filter(s -> {\n    return true;\n}) \n.forEach(s -> System.out.println(s));",
+      "question": "Which version of a program that is chaining stream operations will print exactly five lines?"
+    },
+    {
+      "answer": "Types of bit flags",
+      "question": "\n \n\nWhat could an EnumSet replace?"
+    },
+    {
+      "answer": "Use the volatile keyword. ",
+      "question": "You need to include a variable in your program that may be updated by multiple running threads, so it needs to be stored in main memory. How can you declare this variable? "
+    },
+    {
+      "answer": "The first block will catch instances of Exception and Error. The second block will catch instances of Exception. ",
+      "question": "What is the difference between the following two try-catch blocks? \n\ntry {\n// bad code that throws an exception\n} catch(Throwable e) {\n\n}\n\nand\n\ntry {\n// bad code that throws an exception\n} catch(Exception e) {\n\n}"
+    },
+    {
+      "answer": "Function<String, String> f = String::toLowerCase;",
+      "question": "Consider the following lambda expression:\n\nFunction<String, String> f = s -> s.toLowerCase();\n\nWhich option can replace this expression and will still compile? "
+    },
+    {
+      "answer": "No client should be forced to depend on methods that it does not use. ",
+      "question": "Of the SOLID design principles, what does the Interface Segregation Principle state? "
+    }
+  ]
+},
   {
   "assesment": "ES6",
   "questions": [
