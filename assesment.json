@@ -7144,3 +7144,222 @@ A: const rect = new createRectangle(10, 20);
 Q: What is the primary difference between a generator function and a regular function?
 A: Generator functions can be suspended and resumed, whereas regular functions cannot be resumed once suspended.
 
+
+1. You can use AtomicBoolean for lock-free thread synchronization. You are implementing a class FileProcessor and want to ensure that only one thread at a time processes the file. Your code looks like the following:
+import java.io.File;
+import java.io.IOException;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+public class FileProcessor {
+    private static final AtomicBoolean flag = new AtomicBoolean(false);
+    private final File file;
+
+    public FileProcessor(File file) {
+        this.file = file;
+    }
+
+    public void process() throws IOException {
+    // Choose one of the answers
+    }
+
+    private void processImpl() throws IOException {
+    // ... implementation omitted
+    }
+}
+
+What implementation of the process() method correctly implements lock-free synchronization?
+
+A. public void process() throws IOException {
+    if (flag.compareAndSet(false, true)) {
+        try {
+            processImpl();
+        } finally {
+            flag.set(false);
+        }
+    }
+}
+
+2. What could an EnumSet replace?
+A. Types of bit flags
+
+
+3. You run the following program: 
+public class ThreadsDemo {
+    public static void main(String[] args) {
+        final AtomicInteger counter = new AtomicInteger();
+
+        Runnable task = new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 5; i++) {
+                    System.out.println(counter.incrementAndGet());
+                }
+            }
+        };
+
+        Thread thread1 = new Thread(task);
+        Thread thread2 = new Thread(task);
+
+        thread1.run();
+        thread2.run();
+    }
+}
+What does it print?
+A. The numbers 1 through 10, each on a new line
+
+
+4. Consider the following lambda expression:
+Function<String, String> f = s -> s.toLowerCase();
+Which option can replace this expression and will still compile? 
+A. Function<String, String> f = String::toLowerCase;
+
+
+5. Which approach should limit the risk of memory leaks?
+A. Minimizing the use of static variables/collections and lazily loading a singleton
+
+
+6. Which relationship between classes A and B must be fulfilled to decide that B must perform delegation to an A?
+A. B HAS-A A
+
+
+7. Which stream method receives a predicate written as a lambda expression? 
+A. allMatch()
+
+
+8. What is the output of the following code? 
+public class PracticeClass {
+    public static void main(String[] args) {
+        try {
+            System.out.println("Hello world 1");
+            return;
+        } catch (Exception e) {
+            System.out.println("Hello world 2");
+        }
+        finally {
+            System.out.println("Hello world 3");
+        }
+        System.out.println("Hello world 4");
+    }
+}
+A. Hello world 1
+   Hello world 3 
+
+
+9. When using the command pattern, which class performs an operation?
+A. Receiver
+
+
+10. The following code defines three predicates:
+Stream<String> stream = Stream.of("one", "two", "three", "four", "five");
+Predicate<String> p1 = s -> s.length() > 3;
+Predicate<String> p2 = s -> s.length() < 5;
+Predicate<String> p3 = s -> s.length() == 5;
+Which line of code only prints the "three" value?
+A. stream.filter(p1.or(p2).and(p3)).forEach(System.out::println);
+
+
+11. What is the difference between checked and unchecked exceptions?
+A. Unchecked exceptions can only be handled with the throws keyword, whereas checked exceptions are handled through a try-catch block or with the throws keyword.
+
+
+12. Given the following piece of code:
+List<Integer> li = new ArrayList<Integer>();
+List<Object> lo = li;
+lo.add(new Object());
+Integer i = li.get(0);
+What will happen?
+A. It will produce a compile-time error at line 2.
+
+
+13. When would you declare an object through implementation rather than through an interface?
+A. When the implementation provides additional methods that must be called on the declared object
+}
+
+
+14. What is missing in the MultithreadingSample class? 
+class MultithreadingSample {
+    public void run() {
+        try {
+            System.out.println("Current Thread: " + Thread.currentThread().getId());
+         } catch (Exception e) {
+             e.printStackTrace();
+        }
+    }
+}
+
+public class PracticeClass {
+    public static void main(String[] args) {
+        int numThreads = 8;
+        for (int i = 0; i < numThreads; i++) {
+            MultithreadingSample mts = new MultithreadingSample();
+            mts.start();
+        }
+    }
+}
+A. It does not extend the Thread class. 
+
+
+15. You want to initialize fields of an object of a class that you wrote with special values (such as backslash, quotes) when the object is deserialized. What must you do?
+A. Implement a method with the following signature in your class that initializes the fields the way you want:
+
+private void readObject(java.io.ObjectInputStream in) throws IOException, ClassNotFoundException;
+You try to deserialize the previously serialized Person object with the modified version of class Person. What happens?
+
+16. You serialized a Person object as follows:
+public class Person implements Serializable {
+    private static final long serialVersionUID = 1L;
+    private final Integer id;
+    private final String name;
+
+    public Person(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return id + " " + name;
+    }
+}
+You add a new field to this class and update the constructor and get methods accordingly:
+private final String nickname;
+You try to deserialize the previously serialized Person object with the modified version of class Person. What happens?
+A. It works without error and the new field in the deserialized object is set to null.
+
+
+17. The following anonymous class intends to filter all files from the current folder that have ".txt" as the extension:
+FileFilter filter = new FileFilter() {
+    @Override 
+    public boolean accept(File pathname) {
+        return pathname.getName().endsWith(".txt");
+    }
+};
+File[] files = new File(".").listFiles(filter);
+Which attempt at an equivalent rewrite of the code above results in a syntax error?
+A. FileFilter filter = new FileFilter() {
+    @Override 
+    public boolean accept(File pathname) { 
+        return pathname.getName().endsWith(".txt");
+    }
+};
+
+
+File[] files = new File(".").listFiles(FileFilter::accept);
+
+18. When would you choose composition instead of inheriting from class A?
+A. When class A only provides private constructors
+
+19. What is the main reason to use Java's exception chaining mechanism?
+A. To provide information so an implementation-specific exception is wrapped up in a more general exception with the original exception as the cause
+
+20. What is an example of an unchecked exception? 
+A. NumberFormatException
+
