@@ -6528,3 +6528,130 @@ A: Incorporate refresh token rotation so the authorization server provides a pai
 
 Q: What statement is true when you switch from Rivest-Shamir-Adleman (RSA) to the Advanced Encryption Standard (AES) encryption algorithm?
 A: The sender and the receiver share a private key.
+
+Q: Consider the following code snippet:
+const rect = {
+width() { return this[w]; },
+height() { return this[h]; },
+area() { return this.width() * this.height() }
+}
+const w = Symbol();
+The above code results in the following output:
+"width"
+"height"
+"area"
+Why are constants w and h missing from the console output? 
+A : Symbols are not enumerable so they are not visible to for...in loops.
+
+
+Q: Which snippet shows the proper way to add a new value to a Map?
+A: myMap.set(key, value);
+
+Q: Which code snippet will iterate over just the keys in a Map?
+A: for (key of myMap.keys()) {
+  // work with key
+}
+
+Q: How can you signal an iterator that an error has occurred and won't be iterated until the end while using a for..of?
+A: Implement a throw() statement.
+
+Q: 5. You have created an Object with two Symbols as shown:
+const o = {};
+const tier1 = Symbol('tier1');
+const tier2 = Symbol.for('tier2');
+
+o[tier1] = '0x5413A';
+o[tier2] = '0x8844F';
+How can you get the list of Symbol properties from the object o?
+
+A: Object.getOwnPropertySymbols(o);
+
+Q: Given the following code, how would you get the car's miles per gallon (mpg)?
+class Car {
+  constructor() {
+    this.miles = 270;
+    this.gasAmount = 6;
+  }
+  get mpg() {
+    return this.miles / this.gasAmount;
+  }
+}
+const car = new Car();
+A: car.mpg
+
+Q: Which strategy prevents collection size from affecting an iterator's performance?
+A: Lazy evaluation
+
+Q: You have created an array using the Uint16Array typed array with one element and have assigned a value of 65536 to it as shown:
+let anArray = new Uint16Array(1);
+anArray = 65536;
+What output do you receive on the execution of console.log(anArray);?
+A : 65536
+
+Q: Which of the following statements return true?
+A: Number.isSafeInteger(Math.pow(2, 53) - 1)
+
+Q: Given the following object initializer code:
+const a1 = 'baz';
+const a2 = 108;
+const a3 = {};
+const object2 = {a: a1, b: a2, c: a3};
+const object3 = {a, b, c};
+What is the output of the following code console.log(object2.a === object3.a);?
+A: Error: a is not defined
+
+Q: Which method can you use to clone an object?
+A: Object.assign
+
+Q: What property on the object returned from an iterator signals the end of the sequence or collection?
+A; done
+
+Q: What statement(s), when written in the following code, produce(s) "i" as an output string?
+function* VCount(arg,idx)
+{
+  var vowels = 'aeiouAEIOU';
+  var cnt = 0;
+
+  for(var i = 0; i < arg.length ; i++)
+  {
+    if (vowels.indexOf(arg[i]) !== -1)
+    {
+      cnt += 1;
+      if (cnt == idx) 
+      {
+        // .........
+      }      
+    }  
+  }
+}
+const foo = VCount('Dummy string', 2)
+console.log(foo.next().value);  // Expected output: "i"
+
+A: yield arg[i]
+
+Q: Which snippet adds error handling to the following code?
+myPromise
+  .then(() => {
+    console.log('OK');
+  })
+
+A: myPromise
+  .then(() => {
+    console.log('OK');
+  })
+  .catch(() => {
+    console.log('Oops');
+  });
+
+Q: Given the following code, how would you create a new instance of the Rectangle class?
+const createRectangle = class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+}
+A: const rect = new createRectangle(10, 20);
+
+Q: What is the primary difference between a generator function and a regular function?
+A: Generator functions can be suspended and resumed, whereas regular functions cannot be resumed once suspended.
+
