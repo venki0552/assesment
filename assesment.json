@@ -6409,3 +6409,62 @@ constructor, author
 Correct -
 They are passed to the bound function before any supplied parameters when it is called
 =================================================================================================================================================
+
+
+
+Q:You have a cached response from a REST API call. You make a fresh call and cache the new response instead. How should you do this, ensuring that the previously cached response is overwritten?
+A:Use cache.put(url, response) to make a new request to the REST API and store the response.
+
+
+Q: Which JavaScript Cache API method can help you determine if the cache needs updating without returning any stored response to you?
+A: has
+
+
+Q: What is the callback used to pass errors to Express for the errors to be processed?
+A: next()
+
+
+Q: You instantiated a PouchDB database that you can access via the database variable. How can you store the following single JSON object into it?
+var recipe = { _id: "123", title: "Apple pie",b difficult: false };
+A: database.put(recipe, function callback(err, result) { // handle error/result here });
+
+Q: What is an advantage of having a general-purpose search endpoint as opposed to multiple ones for each case?
+A:  It allows greater flexibility and reduces the amount of code.
+
+Q: You are working on a web application that uses vanilla JavaScript to implement its user interface's (UI) interactivity. Upon successful user login, a button with the identifier searchPremium should become usable. How should you implement this?
+A: document.getElementById('searchPremium').disabled = false;
+
+
+Q: In JSON Web Token - (JWT) based authorization, what is the secret key used for?
+A: To generate a unique signature for the token
+
+Q: What is true about the mechanisms available for uploading a larger file in an asynchronous manner?
+A: You can use the Fetch API.
+
+Q: You want to upload a large file to the server via Fetch API, but you only want to do so if the connection is fast. To avoid a timeout, you will cancel the request if it hasn't succeeded in 2 seconds, but there is no explicit functionality to do so in the Fetch API. How can you proceed?
+A: Use an AbortController with setTimeout.
+
+Q: How can you instantly initialize a new project using npm with default values for all the command-line prompts?
+A: npm init --yes
+
+Q: Which JavaScript function can be used to validate if a value is numeric?
+A: isNaN()
+
+Q: You need to create a new API method for inserting an item using Node.js and Express. What should you do?
+A: router.post('/', (req, res) => {
+  const newItem = req.body;
+
+  // save item...
+
+  res.status(201).send();
+});
+
+Q: In a JSON Web Token (JWT) payload, which claims type should be used to store the application specific user entity information?
+A: Private claims
+
+Q: Which cache method is used to return a previously cached REST API response?
+A: cache.match(url)
+
+Q: Which method of the jsonwebtoken library can add a user object to the JSON Web Token (JWT)?
+A: jwt.sign(...)
+
