@@ -6507,3 +6507,24 @@ app.get('/', (req, res) => {
 });
 What changes would you make to solve this?
 A: The items to be sent need to be part of a JavaScript array.
+
+Q: You remove API gateways between clients and services in a microservices architecture. What happens?
+A: Clients track multiple endpoints by themselves.
+
+Q: You manage a highly secure API that receives a significant number of requests as your marketing campaign flourishes. During this time, a few clients face server refusals, accompanied by the HTTP 431 status code. To mitigate this issue, you use the Retry-After header which reduces the problem's frequency, but the underlying issue persists. How can you resolve the issue with little to no information loss?
+A: Ensure that the Referer header receives a small URL
+
+Q: Which tool strictly follows the server-side service discovery pattern in a microservices environment?
+A: AWS Cloud Map
+
+Q: You create a microservice architecture-based API for an ecommerce platform. The platform enables users to search for a product, purchase it, and handle its delivery. A user selects a speaker worth $150. They finish the initial steps of the transaction that spans across multiple services. In the last step, the API specifies an invalid price value of $1,500. As the API owner, what action would you take in this scenario?
+A: Establish a non-transient service failure and cancel all the user's previous successful steps.
+
+Q: You are working on a microservices architecture to design an API for furniture shopping. The API gathers data for clients who are making purchases as well as clients who are exploring the products. How can you manage data in this scenario?
+A: Only maintain a subset of the information in services that do not require the complete data.
+
+Q: Your website uses OAuth 2.0. The site is under attack. Attackers use replay attacks to compromise your network. During a refresh token exchange, you expect a new access token. The attackers possess the refresh tokens, however, which makes confirming the identity of the requesting source a challenge. How should you respond to this security threat?
+A: Incorporate refresh token rotation so the authorization server provides a pair of refresh-access tokens.
+
+Q: What statement is true when you switch from Rivest-Shamir-Adleman (RSA) to the Advanced Encryption Standard (AES) encryption algorithm?
+A: The sender and the receiver share a private key.
